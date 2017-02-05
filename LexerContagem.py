@@ -7,14 +7,14 @@
 import ply.lex as lex
 
 # List of token names.   This is always required
-# 'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE',
+# 'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE', 'UM', 'DOIS', 'TRES',
+#     , 'ARROBA', 'BARRA', 'CONTRABARRA','NAME', 'LPAREN',
+#     'RPAREN',
 
 
 dic_elementos = {}
 tokens = (
-     'UM', 'DOIS', 'TRES',
-    'IGUAL', 'ARROBA', 'BARRA', 'CONTRABARRA','NAME', 'LPAREN',
-    'RPAREN', 'ELEMENTO'
+      'ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG'
 )
 
 # Tokens
@@ -26,21 +26,23 @@ tokens = (
 # t_EFE = r'\F'
 # t_AGAR = r'\H'
 # t_BE = r'\B'
-t_UM = r'\\1'
-t_DOIS = r'\\2'
-t_TRES = r'\\3'
+# t_UM = r'\\1'
+# t_DOIS = r'\\2'
+# t_TRES = r'\\3'
 t_IGUAL = r'\='
-t_ARROBA = r'\@'
-t_BARRA = r'/'
-t_CONTRABARRA = r'\\'
+t_SIFRAO =  r'\$'
+t_HASHTAG = r'\#'
+# t_ARROBA = r'\@'
+# t_BARRA = r'/'
+# t_CONTRABARRA = r'\\'
 # t_ = r'\+'
 # t_ = r'\+'
 # t_MINUS = r'-'
 # t_TIMES = r'\*'
 # t_DIVIDE = r'/'
 # t_EQUALS = r'='
-t_LPAREN = r'\('
-t_RPAREN = r'\)'
+# t_LPAREN = r'\('
+# t_RPAREN = r'\)'
 
 
 # A regular expression rule with some action code
@@ -59,7 +61,23 @@ def t_ELEMENTO(t):
     try:
          t.value = t.value
          if (t.value == 'C'):
+            try:
+                dic_elementos[t.value] = dic_elementos[t.value]+ 4
+            except:
+                dic_elementos[t.value] =  4
+         if (t.value == 'O'):
+               dic_elementos[t.value] = 2
+         if (t.value == 'N'):
+               dic_elementos[t.value] = 3
+         if (t.value == 'S'):
+               dic_elementos[t.value] = 2
+         if (t.value == 'F'):
+               dic_elementos[t.value] = 1
+         if (t.value == 'H'):
+               dic_elementos[t.value] = 1
+         if (t.value == 'B'):
                dic_elementos[t.value] = 4
+
     except ValueError:
          print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
 	 t.value = 0
@@ -71,7 +89,7 @@ def t_newline(t):
     t.lineno += len(t.value)
 
 # A string containing ignored characters (spaces and tabs)
-t_ignore  = '\( \) \[ \} 1 2 3 4\t'
+t_ignore  = '/ \ ( ) [ ] 1 2 3 4 \t'
 
 # Error handling rule
 def t_error(t):
@@ -82,7 +100,7 @@ def t_error(t):
 lex.lex(debug=1)
 
 # Test it out
-data = '''CC\C=C/C\C=C/C\C=C/CCCCCCCC(O)=O
+data = '''C1=CC=CC=C1
 '''
 
 # Give the lexer some input
