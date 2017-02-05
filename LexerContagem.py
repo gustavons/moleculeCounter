@@ -14,7 +14,7 @@ import ply.lex as lex
 
 dic_elementos = {}
 tokens = (
-      'ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG'
+      'ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG',
 )
 
 # Tokens
@@ -32,6 +32,7 @@ tokens = (
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
+# t_VAZIO = r''
 # t_ARROBA = r'\@'
 # t_BARRA = r'/'
 # t_CONTRABARRA = r'\\'
@@ -57,7 +58,7 @@ def t_NUMBER(t):
 
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
-    r'[CONSFHB]'
+    r'[CONSFHB]+'
     try:
          t.value = t.value
          if (t.value == 'C'):
@@ -89,7 +90,7 @@ def t_newline(t):
     t.lineno += len(t.value)
 
 # A string containing ignored characters (spaces and tabs)
-t_ignore  = '/ \ ( ) [ ] 1 2 3 4 \t'
+t_ignore  = '/\()[]1234\t'
 
 # Error handling rule
 def t_error(t):
@@ -100,16 +101,17 @@ def t_error(t):
 lex.lex(debug=1)
 
 # Test it out
-data = '''C1=CC=CC=C1
-'''
+# data = '''C1=CC=CC=C1
+# '''
+#
+# # Give the lexer some input
+# lex.input(data)
 
-# Give the lexer some input
-lex.input(data)
-
-# Tokenize
-while 1:
-    tok = lex.token()
-    if not tok: break      # No more input
-    print tok
-
-print dic_elementos
+#
+# # Tokenize
+# while 1:
+#     tok = lex.token()
+#     if not tok: break      # No more input
+#     print tok
+#
+# print dic_elementos

@@ -1,0 +1,166 @@
+Created by PLY version 3.9 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> expression IGUAL term
+Rule 2     term -> term factor
+Rule 3     expression -> term
+Rule 4     term -> term HASHTAG factor
+Rule 5     expression -> term SIFRAO factor
+Rule 6     term -> factor
+Rule 7     factor -> ELEMENTO
+
+Terminals, with rules where they appear
+
+ELEMENTO             : 7
+HASHTAG              : 4
+IGUAL                : 1
+SIFRAO               : 5
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 1 0
+factor               : 2 4 5 6
+term                 : 1 2 3 4 5
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . expression IGUAL term
+    (3) expression -> . term
+    (5) expression -> . term SIFRAO factor
+    (2) term -> . term factor
+    (4) term -> . term HASHTAG factor
+    (6) term -> . factor
+    (7) factor -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 4
+
+    term                           shift and go to state 1
+    expression                     shift and go to state 3
+    factor                         shift and go to state 2
+
+state 1
+
+    (3) expression -> term .
+    (5) expression -> term . SIFRAO factor
+    (2) term -> term . factor
+    (4) term -> term . HASHTAG factor
+    (7) factor -> . ELEMENTO
+
+    IGUAL           reduce using rule 3 (expression -> term .)
+    $end            reduce using rule 3 (expression -> term .)
+    SIFRAO          shift and go to state 6
+    HASHTAG         shift and go to state 5
+    ELEMENTO        shift and go to state 4
+
+    factor                         shift and go to state 7
+
+state 2
+
+    (6) term -> factor .
+
+    HASHTAG         reduce using rule 6 (term -> factor .)
+    ELEMENTO        reduce using rule 6 (term -> factor .)
+    IGUAL           reduce using rule 6 (term -> factor .)
+    $end            reduce using rule 6 (term -> factor .)
+    SIFRAO          reduce using rule 6 (term -> factor .)
+
+
+state 3
+
+    (0) S' -> expression .
+    (1) expression -> expression . IGUAL term
+
+    IGUAL           shift and go to state 8
+
+
+state 4
+
+    (7) factor -> ELEMENTO .
+
+    HASHTAG         reduce using rule 7 (factor -> ELEMENTO .)
+    ELEMENTO        reduce using rule 7 (factor -> ELEMENTO .)
+    IGUAL           reduce using rule 7 (factor -> ELEMENTO .)
+    $end            reduce using rule 7 (factor -> ELEMENTO .)
+    SIFRAO          reduce using rule 7 (factor -> ELEMENTO .)
+
+
+state 5
+
+    (4) term -> term HASHTAG . factor
+    (7) factor -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 4
+
+    factor                         shift and go to state 9
+
+state 6
+
+    (5) expression -> term SIFRAO . factor
+    (7) factor -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 4
+
+    factor                         shift and go to state 10
+
+state 7
+
+    (2) term -> term factor .
+
+    HASHTAG         reduce using rule 2 (term -> term factor .)
+    ELEMENTO        reduce using rule 2 (term -> term factor .)
+    IGUAL           reduce using rule 2 (term -> term factor .)
+    $end            reduce using rule 2 (term -> term factor .)
+    SIFRAO          reduce using rule 2 (term -> term factor .)
+
+
+state 8
+
+    (1) expression -> expression IGUAL . term
+    (2) term -> . term factor
+    (4) term -> . term HASHTAG factor
+    (6) term -> . factor
+    (7) factor -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 4
+
+    term                           shift and go to state 11
+    factor                         shift and go to state 2
+
+state 9
+
+    (4) term -> term HASHTAG factor .
+
+    HASHTAG         reduce using rule 4 (term -> term HASHTAG factor .)
+    ELEMENTO        reduce using rule 4 (term -> term HASHTAG factor .)
+    IGUAL           reduce using rule 4 (term -> term HASHTAG factor .)
+    $end            reduce using rule 4 (term -> term HASHTAG factor .)
+    SIFRAO          reduce using rule 4 (term -> term HASHTAG factor .)
+
+
+state 10
+
+    (5) expression -> term SIFRAO factor .
+
+    IGUAL           reduce using rule 5 (expression -> term SIFRAO factor .)
+    $end            reduce using rule 5 (expression -> term SIFRAO factor .)
+
+
+state 11
+
+    (1) expression -> expression IGUAL term .
+    (2) term -> term . factor
+    (4) term -> term . HASHTAG factor
+    (7) factor -> . ELEMENTO
+
+    IGUAL           reduce using rule 1 (expression -> expression IGUAL term .)
+    $end            reduce using rule 1 (expression -> expression IGUAL term .)
+    HASHTAG         shift and go to state 5
+    ELEMENTO        shift and go to state 4
+
+    factor                         shift and go to state 7
