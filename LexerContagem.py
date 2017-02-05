@@ -7,21 +7,25 @@
 import ply.lex as lex
 
 # List of token names.   This is always required
+# 'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE',
+
+
+dic_elementos = {}
 tokens = (
-    'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE', 'UM', 'DOIS', 'TRES',
+     'UM', 'DOIS', 'TRES',
     'IGUAL', 'ARROBA', 'BARRA', 'CONTRABARRA','NAME', 'LPAREN',
-    'RPAREN',
+    'RPAREN', 'ELEMENTO'
 )
 
 # Tokens
 
-t_CE = r'\C'
-t_O = r'\O'
-t_ENE = r'\N'
-t_ESE = r'S'
-t_EFE = r'\F'
-t_AGAR = r'\H'
-t_BE = r'\B'
+# t_CE = r'\C'
+# t_O = r'\O'
+# t_ENE = r'\N'
+# t_ESE = r'S'
+# t_EFE = r'\F'
+# t_AGAR = r'\H'
+# t_BE = r'\B'
 t_UM = r'\\1'
 t_DOIS = r'\\2'
 t_TRES = r'\\3'
@@ -38,6 +42,7 @@ t_CONTRABARRA = r'\\'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 
+
 # A regular expression rule with some action code
 def t_NUMBER(t):
     r'\d+'
@@ -48,13 +53,25 @@ def t_NUMBER(t):
 	 t.value = 0
     return t
 
+# A regular expression rule with some action code
+def t_ELEMENTO(t):
+    r'[CONSFHB]'
+    try:
+         t.value = t.value
+         if (t.value == 'C'):
+               dic_elementos[t.value] = 4
+    except ValueError:
+         print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
+	 t.value = 0
+    return t
+
 # Define a rule so we can track line numbers
 def t_newline(t):
     r'\n+'
     t.lineno += len(t.value)
 
 # A string containing ignored characters (spaces and tabs)
-t_ignore  = ' \t'
+t_ignore  = '\( \) \[ \} 1 2 3 4\t'
 
 # Error handling rule
 def t_error(t):
@@ -76,3 +93,5 @@ while 1:
     tok = lex.token()
     if not tok: break      # No more input
     print tok
+
+print dic_elementos
