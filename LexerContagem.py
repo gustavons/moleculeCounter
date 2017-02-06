@@ -56,6 +56,8 @@ t_HASHTAG = r'\#'
 # 	 t.value = 0
 #     return t
 
+# A string containing ignored characters (spaces and tabs)
+t_ignore  = '/\()[]1234567890\t'
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
     r'[CONSFHB]+'
@@ -84,7 +86,6 @@ def t_ELEMENTO(t):
     except ValueError:
          print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
 	 t.value = 0
-    print 'cheguei aqui'
     return t
 
 # Define a rule so we can track line numbers
@@ -92,8 +93,6 @@ def t_newline(t):
     r'\n+'
     t.lineno += len(t.value)
 
-# A string containing ignored characters (spaces and tabs)
-t_ignore  = '/\()[]1234567890\t'
 
 # Error handling rule
 def t_error(t):
