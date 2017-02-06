@@ -47,14 +47,14 @@ t_HASHTAG = r'\#'
 
 
 # A regular expression rule with some action code
-def t_NUMBER(t):
-    r'\d+'
-    try:
-         t.value = int(t.value)
-    except ValueError:
-         print "Line %d: Number %s is too large!" % (t.lineno,t.value)
-	 t.value = 0
-    return t
+# def t_NUMBER(t):
+#     r'\d+'
+#     try:
+#          t.value =
+#     except ValueError:
+#          print "Line %d: Number %s is too large!" % (t.lineno,t.value)
+# 	 t.value = 0
+#     return t
 
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
@@ -84,7 +84,7 @@ def t_ELEMENTO(t):
     except ValueError:
          print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
 	 t.value = 0
-
+    print 'cheguei aqui'
     return t
 
 # Define a rule so we can track line numbers
@@ -93,7 +93,7 @@ def t_newline(t):
     t.lineno += len(t.value)
 
 # A string containing ignored characters (spaces and tabs)
-t_ignore  = '/\()[]1234\t'
+t_ignore  = '/\()[]1234567890\t'
 
 # Error handling rule
 def t_error(t):
@@ -104,7 +104,7 @@ def t_error(t):
 lex.lex(debug=1)
 
 # Test it out
-# data = '''C1=CC=CC=C1
+# data = '''C1CCC1
 # '''
 #
 # # Give the lexer some input
