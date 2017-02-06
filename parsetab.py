@@ -5,9 +5,9 @@ _tabversion = '3.8'
 
 _lr_method = 'LALR'
 
-_lr_signature = '3EFE45FAC64704508196ECE64C0724DC'
+_lr_signature = 'F450B9B7312585B34884F11ECEF93248'
     
-_lr_action_items = {'SIFRAO':([1,2,4,7,9,],[6,-6,-7,-2,-4,]),'$end':([1,2,3,4,7,9,10,11,],[-3,-6,0,-7,-2,-4,-5,-1,]),'IGUAL':([1,2,3,4,7,9,10,11,],[-3,-6,8,-7,-2,-4,-5,-1,]),'HASHTAG':([1,2,4,7,9,11,],[5,-6,-7,-2,-4,5,]),'ELEMENTO':([0,1,2,4,5,6,7,8,9,11,],[4,4,-6,-7,4,4,-2,4,-4,4,]),}
+_lr_action_items = {'SIFRAO':([1,2,4,8,9,],[6,-6,-2,-4,-7,]),'$end':([1,2,3,4,8,9,10,11,],[-3,-6,0,-2,-4,-7,-5,-1,]),'IGUAL':([1,2,4,8,9,],[7,-6,-2,-4,-7,]),'HASHTAG':([1,2,4,8,9,11,],[5,-6,-2,-4,-7,5,]),'ELEMENTO':([0,5,6,7,],[4,9,9,4,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -16,7 +16,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'term':([0,8,],[1,11,]),'expression':([0,],[3,]),'factor':([0,1,5,6,8,11,],[2,7,9,10,2,7,]),}
+_lr_goto_items = {'term':([0,7,],[1,11,]),'expression':([0,],[3,]),'factor':([0,5,6,7,],[2,8,10,2,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,11 +26,11 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> expression","S'",1,None,None,None),
-  ('expression -> expression IGUAL term','expression',3,'p_expression_igual','mainContagem.py',13),
-  ('term -> term factor','term',2,'p_expression_nada','mainContagem.py',22),
-  ('expression -> term','expression',1,'p_expression_term','mainContagem.py',31),
-  ('term -> term HASHTAG factor','term',3,'p_term_hashtag','mainContagem.py',35),
-  ('expression -> term SIFRAO factor','expression',3,'p_term_sifrao','mainContagem.py',42),
-  ('term -> factor','term',1,'p_term_factor','mainContagem.py',48),
-  ('factor -> ELEMENTO','factor',1,'p_factor_num','mainContagem.py',52),
+  ('expression -> term IGUAL term','expression',3,'p_expression_igual','mainContagem.py',16),
+  ('term -> ELEMENTO','term',1,'p_expression_nada','mainContagem.py',37),
+  ('expression -> term','expression',1,'p_expression_term','mainContagem.py',106),
+  ('term -> term HASHTAG factor','term',3,'p_term_hashtag','mainContagem.py',110),
+  ('expression -> term SIFRAO factor','expression',3,'p_term_sifrao','mainContagem.py',117),
+  ('term -> factor','term',1,'p_term_factor','mainContagem.py',123),
+  ('factor -> ELEMENTO','factor',1,'p_factor_num','mainContagem.py',127),
 ]
