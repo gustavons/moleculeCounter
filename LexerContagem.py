@@ -7,14 +7,14 @@
 import ply.lex as lex
 
 # List of token names.   This is always required
-# 'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE', 'UM', 'DOIS', 'TRES',
+# 'CE', 'O','ENE', 'ESE', 'EFE', 'AGAR', 'BE', ' 'DOIS', 'TRES',
 #     , 'ARROBA', 'BARRA', 'CONTRABARRA','NAME', 'LPAREN',
 #     'RPAREN',
 
 
 # dic_elementos = {}
 tokens = (
-      'ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG',
+      'NUMBER','ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE'
 )
 
 # Tokens
@@ -26,12 +26,15 @@ tokens = (
 # t_EFE = r'\F'
 # t_AGAR = r'\H'
 # t_BE = r'\B'
-# t_UM = r'\\1'
+t_CEELE = r'l'
+t_NUMBER = r'\d'
+t_SIMBOLOS = r'[/ \( \) \[ \] \\ @ \+]+'
 # t_DOIS = r'\\2'
 # t_TRES = r'\\3'
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
+
 # t_VAZIO = r''
 # t_ARROBA = r'\@'
 # t_BARRA = r'/'
@@ -57,13 +60,14 @@ t_HASHTAG = r'\#'
 #     return t
 
 # A string containing ignored characters (spaces and tabs)
-t_ignore  = '/\()[]1234567890\t'
+t_ignore = '\t\n'
+
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
     r'[CONSFHB]+'
     try:
          t.value = t.value
-         print t.value
+
 
          # if (t.value == 'C'):
          #    try:
@@ -86,6 +90,7 @@ def t_ELEMENTO(t):
     except ValueError:
          print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
 	 t.value = 0
+    print t
     return t
 
 # Define a rule so we can track line numbers
