@@ -69,28 +69,9 @@ def t_ELEMENTO(t):
          t.value = t.value
 
 
-         # if (t.value == 'C'):
-         #    try:
-         #        dic_elementos[t.value] = dic_elementos[t.value]+ 4
-         #    except:
-         #        dic_elementos[t.value] =  4
-         # if (t.value == 'O'):
-         #       dic_elementos[t.value] = 2
-         # if (t.value == 'N'):
-         #       dic_elementos[t.value] = 3
-         # if (t.value == 'S'):
-         #       dic_elementos[t.value] = 2
-         # if (t.value == 'F'):
-         #       dic_elementos[t.value] = 1
-         # if (t.value == 'H'):
-         #       dic_elementos[t.value] = 1
-         # if (t.value == 'B'):
-         #       dic_elementos[t.value] = 4
-
     except ValueError:
          print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
 	 t.value = 0
-    print t
     return t
 
 # Define a rule so we can track line numbers

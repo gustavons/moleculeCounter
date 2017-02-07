@@ -10,7 +10,9 @@ import LexerContagem as lexer
 dic_elementos = {}
 
 dic_valorelementos = {'C':4,'O':2,'N':3,'S':2,'F':1,'H':1,'B':4, 'Cl':1}
+# dic_elementos['H'] = 0
 
+# precedence = ('left','Cl')
 def p_expression_igual (p):
     'term :  term IGUAL term'
     print 'entrou igual'
@@ -40,25 +42,10 @@ def p_expression_number (p):
 def p_expression_number_junto (p):
     'term :  term NUMBER term'
 
-def p_expression_ceele (p):
-    'term :  ce CEELE term'
-    print 'entrou CEELE'
-    try:
-        dic_elementos['Cl'] = dic_elementos['Cl'] + 1
-    except:
-        dic_elementos['Cl'] = 1
+# def p_expression_cl (p):
+#     'term :  term CEELE term'
 
 
-    try:
-        dic_elementos['H'] = dic_elementos['H'] - 1
-
-
-    except :
-        dic_elementos['H'] = dic_valorelementos['Cl']
-
-
-def p_expression_ce(p):
-    'ce : ELEMENTO'
 def p_expression_simbolos(p):
     'term :  term SIMBOLOS'
 
@@ -137,6 +124,13 @@ yacc.yacc(debug=True)
 
 # Use this if you want to build the parser using LALR(1) instead of SLR
 yacc.yacc(method="LALR")
-
-yacc.parse('ClC')
+# file = 'drug_revised_1_numbersatoms_33_(1).smiles'
+#         #consulta maior umidade
+# for linha in open(file,'r'):
+#     print linha
+#             #temperatura, umidade, chuva = linha.split(",")
+#             #if float(umidade) > maior_umid:
+#             #    maior_umid = float(umidade)
+#         #print('\tMaior Umidade: %d\n')% maior_umid
+yacc.parse('NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)[C@H](CC(O)=O)NC(=O)CNC(=O)[C@H]')
 print dic_elementos

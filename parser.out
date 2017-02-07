@@ -1,4 +1,4 @@
-Created by PLY version 3.9 (http://www.dabeaz.com/ply)
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
 
 Grammar
 
@@ -11,14 +11,13 @@ Rule 5     ce -> ELEMENTO
 Rule 6     term -> term SIMBOLOS
 Rule 7     term -> term SIMBOLOS term
 Rule 8     term -> ELEMENTO
-Rule 9     term -> term HASHTAG factor
-Rule 10    expression -> term SIFRAO factor
-Rule 11    factor -> ELEMENTO
+Rule 9     term -> term HASHTAG term
+Rule 10    term -> term SIFRAO term
 
 Terminals, with rules where they appear
 
 CEELE                : 4
-ELEMENTO             : 5 8 11
+ELEMENTO             : 5 8
 HASHTAG              : 9
 IGUAL                : 1
 NUMBER               : 2 3
@@ -29,9 +28,7 @@ error                :
 Nonterminals, with rules where they appear
 
 ce                   : 4
-expression           : 
-factor               : 9 10
-term                 : 1 1 2 3 3 4 6 7 7 9 10 0
+term                 : 1 1 2 3 3 4 6 7 7 9 9 10 10 0
 
 Parsing method: LALR
 
@@ -45,7 +42,8 @@ state 0
     (6) term -> . term SIMBOLOS
     (7) term -> . term SIMBOLOS term
     (8) term -> . ELEMENTO
-    (9) term -> . term HASHTAG factor
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
     (5) ce -> . ELEMENTO
 
     ELEMENTO        shift and go to state 3
@@ -61,19 +59,21 @@ state 1
     (3) term -> term . NUMBER term
     (6) term -> term . SIMBOLOS
     (7) term -> term . SIMBOLOS term
-    (9) term -> term . HASHTAG factor
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
 
-    IGUAL           shift and go to state 7
-    NUMBER          shift and go to state 6
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
     SIMBOLOS        shift and go to state 4
-    HASHTAG         shift and go to state 5
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
 
 
 state 2
 
     (4) term -> ce . CEELE term
 
-    CEELE           shift and go to state 8
+    CEELE           shift and go to state 9
 
 
 state 3
@@ -85,6 +85,7 @@ state 3
     NUMBER          reduce using rule 8 (term -> ELEMENTO .)
     SIMBOLOS        reduce using rule 8 (term -> ELEMENTO .)
     HASHTAG         reduce using rule 8 (term -> ELEMENTO .)
+    SIFRAO          reduce using rule 8 (term -> ELEMENTO .)
     $end            reduce using rule 8 (term -> ELEMENTO .)
     CEELE           reduce using rule 5 (ce -> ELEMENTO .)
 
@@ -100,29 +101,22 @@ state 4
     (6) term -> . term SIMBOLOS
     (7) term -> . term SIMBOLOS term
     (8) term -> . ELEMENTO
-    (9) term -> . term HASHTAG factor
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
     (5) ce -> . ELEMENTO
 
     IGUAL           reduce using rule 6 (term -> term SIMBOLOS .)
     NUMBER          reduce using rule 6 (term -> term SIMBOLOS .)
     SIMBOLOS        reduce using rule 6 (term -> term SIMBOLOS .)
     HASHTAG         reduce using rule 6 (term -> term SIMBOLOS .)
+    SIFRAO          reduce using rule 6 (term -> term SIMBOLOS .)
     $end            reduce using rule 6 (term -> term SIMBOLOS .)
     ELEMENTO        shift and go to state 3
 
-    term                           shift and go to state 9
+    term                           shift and go to state 10
     ce                             shift and go to state 2
 
 state 5
-
-    (9) term -> term HASHTAG . factor
-    (11) factor -> . ELEMENTO
-
-    ELEMENTO        shift and go to state 11
-
-    factor                         shift and go to state 10
-
-state 6
 
     (2) term -> term NUMBER .
     (3) term -> term NUMBER . term
@@ -133,20 +127,22 @@ state 6
     (6) term -> . term SIMBOLOS
     (7) term -> . term SIMBOLOS term
     (8) term -> . ELEMENTO
-    (9) term -> . term HASHTAG factor
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
     (5) ce -> . ELEMENTO
 
     IGUAL           reduce using rule 2 (term -> term NUMBER .)
     NUMBER          reduce using rule 2 (term -> term NUMBER .)
     SIMBOLOS        reduce using rule 2 (term -> term NUMBER .)
     HASHTAG         reduce using rule 2 (term -> term NUMBER .)
+    SIFRAO          reduce using rule 2 (term -> term NUMBER .)
     $end            reduce using rule 2 (term -> term NUMBER .)
     ELEMENTO        shift and go to state 3
 
-    term                           shift and go to state 12
+    term                           shift and go to state 11
     ce                             shift and go to state 2
 
-state 7
+state 6
 
     (1) term -> term IGUAL . term
     (1) term -> . term IGUAL term
@@ -156,7 +152,27 @@ state 7
     (6) term -> . term SIMBOLOS
     (7) term -> . term SIMBOLOS term
     (8) term -> . ELEMENTO
-    (9) term -> . term HASHTAG factor
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
+    (5) ce -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 3
+
+    term                           shift and go to state 12
+    ce                             shift and go to state 2
+
+state 7
+
+    (9) term -> term HASHTAG . term
+    (1) term -> . term IGUAL term
+    (2) term -> . term NUMBER
+    (3) term -> . term NUMBER term
+    (4) term -> . ce CEELE term
+    (6) term -> . term SIMBOLOS
+    (7) term -> . term SIMBOLOS term
+    (8) term -> . ELEMENTO
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
     (5) ce -> . ELEMENTO
 
     ELEMENTO        shift and go to state 3
@@ -166,7 +182,7 @@ state 7
 
 state 8
 
-    (4) term -> ce CEELE . term
+    (10) term -> term SIFRAO . term
     (1) term -> . term IGUAL term
     (2) term -> . term NUMBER
     (3) term -> . term NUMBER term
@@ -174,7 +190,8 @@ state 8
     (6) term -> . term SIMBOLOS
     (7) term -> . term SIMBOLOS term
     (8) term -> . ELEMENTO
-    (9) term -> . term HASHTAG factor
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
     (5) ce -> . ELEMENTO
 
     ELEMENTO        shift and go to state 3
@@ -184,53 +201,54 @@ state 8
 
 state 9
 
+    (4) term -> ce CEELE . term
+    (1) term -> . term IGUAL term
+    (2) term -> . term NUMBER
+    (3) term -> . term NUMBER term
+    (4) term -> . ce CEELE term
+    (6) term -> . term SIMBOLOS
+    (7) term -> . term SIMBOLOS term
+    (8) term -> . ELEMENTO
+    (9) term -> . term HASHTAG term
+    (10) term -> . term SIFRAO term
+    (5) ce -> . ELEMENTO
+
+    ELEMENTO        shift and go to state 3
+
+    term                           shift and go to state 15
+    ce                             shift and go to state 2
+
+state 10
+
     (7) term -> term SIMBOLOS term .
     (1) term -> term . IGUAL term
     (2) term -> term . NUMBER
     (3) term -> term . NUMBER term
     (6) term -> term . SIMBOLOS
     (7) term -> term . SIMBOLOS term
-    (9) term -> term . HASHTAG factor
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
 
   ! shift/reduce conflict for IGUAL resolved as shift
   ! shift/reduce conflict for NUMBER resolved as shift
   ! shift/reduce conflict for SIMBOLOS resolved as shift
   ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
     $end            reduce using rule 7 (term -> term SIMBOLOS term .)
-    IGUAL           shift and go to state 7
-    NUMBER          shift and go to state 6
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
     SIMBOLOS        shift and go to state 4
-    HASHTAG         shift and go to state 5
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
 
   ! IGUAL           [ reduce using rule 7 (term -> term SIMBOLOS term .) ]
   ! NUMBER          [ reduce using rule 7 (term -> term SIMBOLOS term .) ]
   ! SIMBOLOS        [ reduce using rule 7 (term -> term SIMBOLOS term .) ]
   ! HASHTAG         [ reduce using rule 7 (term -> term SIMBOLOS term .) ]
-
-
-state 10
-
-    (9) term -> term HASHTAG factor .
-
-    IGUAL           reduce using rule 9 (term -> term HASHTAG factor .)
-    NUMBER          reduce using rule 9 (term -> term HASHTAG factor .)
-    SIMBOLOS        reduce using rule 9 (term -> term HASHTAG factor .)
-    HASHTAG         reduce using rule 9 (term -> term HASHTAG factor .)
-    $end            reduce using rule 9 (term -> term HASHTAG factor .)
+  ! SIFRAO          [ reduce using rule 7 (term -> term SIMBOLOS term .) ]
 
 
 state 11
-
-    (11) factor -> ELEMENTO .
-
-    IGUAL           reduce using rule 11 (factor -> ELEMENTO .)
-    NUMBER          reduce using rule 11 (factor -> ELEMENTO .)
-    SIMBOLOS        reduce using rule 11 (factor -> ELEMENTO .)
-    HASHTAG         reduce using rule 11 (factor -> ELEMENTO .)
-    $end            reduce using rule 11 (factor -> ELEMENTO .)
-
-
-state 12
 
     (3) term -> term NUMBER term .
     (1) term -> term . IGUAL term
@@ -238,25 +256,29 @@ state 12
     (3) term -> term . NUMBER term
     (6) term -> term . SIMBOLOS
     (7) term -> term . SIMBOLOS term
-    (9) term -> term . HASHTAG factor
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
 
   ! shift/reduce conflict for IGUAL resolved as shift
   ! shift/reduce conflict for NUMBER resolved as shift
   ! shift/reduce conflict for SIMBOLOS resolved as shift
   ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
     $end            reduce using rule 3 (term -> term NUMBER term .)
-    IGUAL           shift and go to state 7
-    NUMBER          shift and go to state 6
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
     SIMBOLOS        shift and go to state 4
-    HASHTAG         shift and go to state 5
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
 
   ! IGUAL           [ reduce using rule 3 (term -> term NUMBER term .) ]
   ! NUMBER          [ reduce using rule 3 (term -> term NUMBER term .) ]
   ! SIMBOLOS        [ reduce using rule 3 (term -> term NUMBER term .) ]
   ! HASHTAG         [ reduce using rule 3 (term -> term NUMBER term .) ]
+  ! SIFRAO          [ reduce using rule 3 (term -> term NUMBER term .) ]
 
 
-state 13
+state 12
 
     (1) term -> term IGUAL term .
     (1) term -> term . IGUAL term
@@ -264,25 +286,89 @@ state 13
     (3) term -> term . NUMBER term
     (6) term -> term . SIMBOLOS
     (7) term -> term . SIMBOLOS term
-    (9) term -> term . HASHTAG factor
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
 
   ! shift/reduce conflict for IGUAL resolved as shift
   ! shift/reduce conflict for NUMBER resolved as shift
   ! shift/reduce conflict for SIMBOLOS resolved as shift
   ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
     $end            reduce using rule 1 (term -> term IGUAL term .)
-    IGUAL           shift and go to state 7
-    NUMBER          shift and go to state 6
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
     SIMBOLOS        shift and go to state 4
-    HASHTAG         shift and go to state 5
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
 
   ! IGUAL           [ reduce using rule 1 (term -> term IGUAL term .) ]
   ! NUMBER          [ reduce using rule 1 (term -> term IGUAL term .) ]
   ! SIMBOLOS        [ reduce using rule 1 (term -> term IGUAL term .) ]
   ! HASHTAG         [ reduce using rule 1 (term -> term IGUAL term .) ]
+  ! SIFRAO          [ reduce using rule 1 (term -> term IGUAL term .) ]
+
+
+state 13
+
+    (9) term -> term HASHTAG term .
+    (1) term -> term . IGUAL term
+    (2) term -> term . NUMBER
+    (3) term -> term . NUMBER term
+    (6) term -> term . SIMBOLOS
+    (7) term -> term . SIMBOLOS term
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
+
+  ! shift/reduce conflict for IGUAL resolved as shift
+  ! shift/reduce conflict for NUMBER resolved as shift
+  ! shift/reduce conflict for SIMBOLOS resolved as shift
+  ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
+    $end            reduce using rule 9 (term -> term HASHTAG term .)
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
+    SIMBOLOS        shift and go to state 4
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
+
+  ! IGUAL           [ reduce using rule 9 (term -> term HASHTAG term .) ]
+  ! NUMBER          [ reduce using rule 9 (term -> term HASHTAG term .) ]
+  ! SIMBOLOS        [ reduce using rule 9 (term -> term HASHTAG term .) ]
+  ! HASHTAG         [ reduce using rule 9 (term -> term HASHTAG term .) ]
+  ! SIFRAO          [ reduce using rule 9 (term -> term HASHTAG term .) ]
 
 
 state 14
+
+    (10) term -> term SIFRAO term .
+    (1) term -> term . IGUAL term
+    (2) term -> term . NUMBER
+    (3) term -> term . NUMBER term
+    (6) term -> term . SIMBOLOS
+    (7) term -> term . SIMBOLOS term
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
+
+  ! shift/reduce conflict for IGUAL resolved as shift
+  ! shift/reduce conflict for NUMBER resolved as shift
+  ! shift/reduce conflict for SIMBOLOS resolved as shift
+  ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
+    $end            reduce using rule 10 (term -> term SIFRAO term .)
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
+    SIMBOLOS        shift and go to state 4
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
+
+  ! IGUAL           [ reduce using rule 10 (term -> term SIFRAO term .) ]
+  ! NUMBER          [ reduce using rule 10 (term -> term SIFRAO term .) ]
+  ! SIMBOLOS        [ reduce using rule 10 (term -> term SIFRAO term .) ]
+  ! HASHTAG         [ reduce using rule 10 (term -> term SIFRAO term .) ]
+  ! SIFRAO          [ reduce using rule 10 (term -> term SIFRAO term .) ]
+
+
+state 15
 
     (4) term -> ce CEELE term .
     (1) term -> term . IGUAL term
@@ -290,39 +376,57 @@ state 14
     (3) term -> term . NUMBER term
     (6) term -> term . SIMBOLOS
     (7) term -> term . SIMBOLOS term
-    (9) term -> term . HASHTAG factor
+    (9) term -> term . HASHTAG term
+    (10) term -> term . SIFRAO term
 
   ! shift/reduce conflict for IGUAL resolved as shift
   ! shift/reduce conflict for NUMBER resolved as shift
   ! shift/reduce conflict for SIMBOLOS resolved as shift
   ! shift/reduce conflict for HASHTAG resolved as shift
+  ! shift/reduce conflict for SIFRAO resolved as shift
     $end            reduce using rule 4 (term -> ce CEELE term .)
-    IGUAL           shift and go to state 7
-    NUMBER          shift and go to state 6
+    IGUAL           shift and go to state 6
+    NUMBER          shift and go to state 5
     SIMBOLOS        shift and go to state 4
-    HASHTAG         shift and go to state 5
+    HASHTAG         shift and go to state 7
+    SIFRAO          shift and go to state 8
 
   ! IGUAL           [ reduce using rule 4 (term -> ce CEELE term .) ]
   ! NUMBER          [ reduce using rule 4 (term -> ce CEELE term .) ]
   ! SIMBOLOS        [ reduce using rule 4 (term -> ce CEELE term .) ]
   ! HASHTAG         [ reduce using rule 4 (term -> ce CEELE term .) ]
+  ! SIFRAO          [ reduce using rule 4 (term -> ce CEELE term .) ]
 
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for IGUAL in state 9 resolved as shift
-WARNING: shift/reduce conflict for NUMBER in state 9 resolved as shift
-WARNING: shift/reduce conflict for SIMBOLOS in state 9 resolved as shift
-WARNING: shift/reduce conflict for HASHTAG in state 9 resolved as shift
+WARNING: shift/reduce conflict for IGUAL in state 10 resolved as shift
+WARNING: shift/reduce conflict for NUMBER in state 10 resolved as shift
+WARNING: shift/reduce conflict for SIMBOLOS in state 10 resolved as shift
+WARNING: shift/reduce conflict for HASHTAG in state 10 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 10 resolved as shift
+WARNING: shift/reduce conflict for IGUAL in state 11 resolved as shift
+WARNING: shift/reduce conflict for NUMBER in state 11 resolved as shift
+WARNING: shift/reduce conflict for SIMBOLOS in state 11 resolved as shift
+WARNING: shift/reduce conflict for HASHTAG in state 11 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 11 resolved as shift
 WARNING: shift/reduce conflict for IGUAL in state 12 resolved as shift
 WARNING: shift/reduce conflict for NUMBER in state 12 resolved as shift
 WARNING: shift/reduce conflict for SIMBOLOS in state 12 resolved as shift
 WARNING: shift/reduce conflict for HASHTAG in state 12 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 12 resolved as shift
 WARNING: shift/reduce conflict for IGUAL in state 13 resolved as shift
 WARNING: shift/reduce conflict for NUMBER in state 13 resolved as shift
 WARNING: shift/reduce conflict for SIMBOLOS in state 13 resolved as shift
 WARNING: shift/reduce conflict for HASHTAG in state 13 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 13 resolved as shift
 WARNING: shift/reduce conflict for IGUAL in state 14 resolved as shift
 WARNING: shift/reduce conflict for NUMBER in state 14 resolved as shift
 WARNING: shift/reduce conflict for SIMBOLOS in state 14 resolved as shift
 WARNING: shift/reduce conflict for HASHTAG in state 14 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 14 resolved as shift
+WARNING: shift/reduce conflict for IGUAL in state 15 resolved as shift
+WARNING: shift/reduce conflict for NUMBER in state 15 resolved as shift
+WARNING: shift/reduce conflict for SIMBOLOS in state 15 resolved as shift
+WARNING: shift/reduce conflict for HASHTAG in state 15 resolved as shift
+WARNING: shift/reduce conflict for SIFRAO in state 15 resolved as shift
