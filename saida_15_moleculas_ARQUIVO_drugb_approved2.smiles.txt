@@ -1,0 +1,1 @@
+1 {'H': 8, 'C': 3, 'O': 2, 'N': 2} Soma moleculas: 15

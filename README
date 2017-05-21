@@ -1,0 +1,9 @@
+Para que esse programa seja executado é preciso que a biblioteca ply esteja istalada no python
+
+
+Antes de executar o programa o nome do arquivo .smiles deve ser inserido na linha 174 do arquivo mainContagemPronto.py
+
+Depois disso deve-se executar o arquivo mainContagemPronto.py, e será pedido o número de atomos.
+
+Saida:
+Como resultado seram gerados três arquivos, um com o sucesso, outro com o insucesso e outro com os que não puderam ser contados
