@@ -33,7 +33,7 @@ def analise(file, quantidade_moleculas):
         except TypeError:
             pass
     def p_expression_ceele (p):
-            'term : ce CEELE term'
+            'term : term CEELE term'
             try:
                 dic_elementos['Cl'] = dic_elementos['Cl'] + 1
             except:
@@ -64,7 +64,6 @@ def analise(file, quantidade_moleculas):
 
     def p_expression_ce(p):
         'ce : ELEMENTO'
-
 
     def p_expression_number (p):
         'term :  term NUMBER'
@@ -148,13 +147,8 @@ def analise(file, quantidade_moleculas):
     def p_simbolos_juntos(p):
         'term : SIMBOLOS term'
 
-    # def p_simbol(p):
-    #     'term : SIMBOLOS'
-
     def p_simbolos(p):
         'term : NUMBER term'
-
-
     def p_error(p):
         print "Syntax error in input!"
         
@@ -168,9 +162,9 @@ def analise(file, quantidade_moleculas):
 
 
     # for linha in open(file,'r'):
-    for linha in ['Cl(=O)']:
+    for linha in ['HH']:
         dic_elementos = {}
-        dic_valorelementos = {'C': 4, 'O': 2, 'N': 3, 'S': 2, 'F': 1, 'H': 1, 'B': 4, 'Cl': 7}
+        dic_valorelementos = {'C': 4, 'O': 2, 'N': 5, 'S': 2, 'F': 1, 'H': 1, 'B': 4, 'Cl': 7}
         moleculas += 1
         codigo_linha +=1
         try:

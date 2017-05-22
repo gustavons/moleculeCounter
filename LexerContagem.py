@@ -7,7 +7,7 @@ tokens = ('NUMBER','ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE'
 # Tokens
 t_CEELE = r'l'
 t_NUMBER = r'\d'
-t_SIMBOLOS = r'[/ \( \) \[ \] \\ @ \+]+'
+t_SIMBOLOS = r'[/ \( \) \[ \] \\ @ \+ \-]+'
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
