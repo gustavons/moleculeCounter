@@ -1,1 +1,1 @@
-1 {'H': 0} Soma moleculas: 0
+1 {'H': 2} Soma moleculas: 2

@@ -101,7 +101,8 @@ def analise(file, quantidade_moleculas):
                     dic_elementos[i] = 1
 
                 try:
-                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[i] - 2
+                    if (i != 'H'):
+                        dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[i] - 2
 
 
                 except:
