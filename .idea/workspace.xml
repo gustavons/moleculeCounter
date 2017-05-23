@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad781847-a62a-44ea-807d-3eafa359be9f" name="Default" comment="" />
+    <list default="true" id="ad781847-a62a-44ea-807d-3eafa359be9f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexerContagem.py" afterPath="$PROJECT_DIR$/LexerContagem.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContagemPronto.py" afterPath="$PROJECT_DIR$/mainContagemPronto.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" afterPath="$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsetab.py" afterPath="$PROJECT_DIR$/parsetab.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saida_diferente_de_1_moleculas_ARQUIVO_drugb_approved2.smiles.txt" afterPath="$PROJECT_DIR$/saida_diferente_de_1_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
+    </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +27,7 @@
     <SUITE FILE_PATH="coverage/Implementacao$calclex.coverage" NAME="calclex Coverage Results" MODIFIED="1486236417805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$LerArquivo.coverage" NAME="LerArquivo Coverage Results" MODIFIED="1486471679241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$LexerContagem.coverage" NAME="LexerContagem Coverage Results" MODIFIED="1486375983023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Implementacao$mainContagemPronto.coverage" NAME="mainContagemPronto Coverage Results" MODIFIED="1495478726094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Implementacao$mainContagemPronto.coverage" NAME="mainContagemPronto Coverage Results" MODIFIED="1495485438813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,11 +49,11 @@
       <file leaf-file-name="LexerContagem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LexerContagem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="306">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="14" />
               <folding>
-                <marker date="1495328558914" expanded="true" signature="601:611" ph="..." />
-                <marker date="1495328558914" expanded="true" signature="858:915" ph="..." />
+                <marker date="1495485321492" expanded="true" signature="629:639" ph="..." />
+                <marker date="1495485321492" expanded="true" signature="886:943" ph="..." />
               </folding>
             </state>
           </provider>
@@ -65,10 +72,11 @@
       <file leaf-file-name="mainContagemPronto.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainContagemPronto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2628">
-              <caret line="164" column="21" lean-forward="false" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="21" />
+            <state relative-caret-position="25">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#4245#5574#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -77,18 +85,8 @@
       <file leaf-file-name="yacc.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5832">
-              <caret line="330" column="0" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lex.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/lex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5958">
-              <caret line="336" column="0" lean-forward="false" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="1117" column="0" lean-forward="false" selection-start-line="1117" selection-start-column="0" selection-end-line="1117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/parser.out">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1296">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="77" selection-end-column="38" />
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,7 +135,6 @@
       <find>lexer.</find>
       <find>parser</find>
       <find>term</find>
-      <find>i</find>
       <find>LAR</find>
       <find>LAL</find>
       <find>LALR</find>
@@ -151,6 +148,7 @@
       <find>N[C@@H]</find>
       <find>time.time()</find>
       <find>ELEMEN</find>
+      <find>i</find>
     </findStrings>
     <replaceStrings>
       <replace>(p):     'expression : CE expression'     p[0] = p[1] + p[3]</replace>
@@ -164,6 +162,7 @@
       <replace>p[1].upper()</replace>
       <replace>p[3][0].upper()</replace>
       <replace>copy.deepcopy(time.time())</replace>
+      <replace>letter</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -594,7 +593,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="743" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32701063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -606,7 +605,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31993568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39871383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39871383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -685,6 +684,16 @@
           <line>16</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -693,7 +702,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="49" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -834,14 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drugb_approved2.smiles">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parsetab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-293">
@@ -857,39 +858,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5832">
-          <caret line="330" column="0" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser.out">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="77" selection-end-column="38" />
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LexerContagem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="306">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="14" />
           <folding>
-            <marker date="1495328558914" expanded="true" signature="601:611" ph="..." />
-            <marker date="1495328558914" expanded="true" signature="858:915" ph="..." />
+            <marker date="1495485321492" expanded="true" signature="629:639" ph="..." />
+            <marker date="1495485321492" expanded="true" signature="886:943" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugb_approved2.smiles">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="1117" column="0" lean-forward="false" selection-start-line="1117" selection-start-column="0" selection-end-line="1117" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainContagemPronto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2628">
-          <caret line="164" column="21" lean-forward="false" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="21" />
+        <state relative-caret-position="25">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#4245#5574#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -14,24 +14,7 @@ def analise(file, quantidade_moleculas):
     insucesso = open(sem_sucesso_nome_arquivo, 'w')
     nao_contado = open(sem_contar_nome_arquivo, 'w')
 
-    def p_expression_igual (p):
-        'term :  term IGUAL term'
-        try:
-            dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
-        except IndexError:
-            dic_elementos[p[3][0].upper()] = 1
 
-        except TypeError:
-            pass
-
-        try:
-            dic_elementos['H'] = dic_elementos['H'] - 2
-
-
-        except IndexError:
-            dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
-        except TypeError:
-            pass
     def p_expression_ceele (p):
             'term : term CEELE term'
             try:
@@ -49,6 +32,7 @@ def analise(file, quantidade_moleculas):
 
     def p_so_ceele(p):
         'term : ce CEELE'
+
         try:
             dic_elementos['Cl'] = dic_elementos['Cl'] + 1
         except:
@@ -78,37 +62,41 @@ def analise(file, quantidade_moleculas):
         'term :  term SIMBOLOS term'
 
 
+    def p_expression_igual (p):
+        'term :  term IGUAL term'
+        try:
+            dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
+        except IndexError:
+            dic_elementos[p[3][0].upper()] = 1
+
+        except TypeError:
+            pass
+
+        try:
+            dic_elementos['H'] = dic_elementos['H'] - 2
+
+
+        except IndexError:
+            dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
+        except TypeError:
+            pass
+
     def p_expression_nada(p):
         'term : ELEMENTO'
-        if p[1] == 'Cl':
-            try:
-                dic_elementos[p[1]] = dic_elementos[p[1]] + 1
-            except:
-                dic_elementos[p[1]] = 1
+        for i in range(0, len(p[1])):
 
+            letter = p[1][i].upper()
             try:
-                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[p[1].upper()] - 2
-
+                # if (letter != 'H'):
+                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
 
             except:
-                dic_elementos['H'] = dic_valorelementos[p[1].upper()]
-        else:
-            for i in p[1]:
-                i = i.upper()
-                try:
-                    dic_elementos[i] = dic_elementos[i] + 1
-                except:
-                    dic_elementos[i] = 1
+                dic_elementos['H'] = dic_valorelementos[letter]
 
-                try:
-                    if (i != 'H'):
-                        dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[i] - 2
-
-
-                except:
-                    dic_elementos['H'] = dic_valorelementos[i]
-                        # CONSFHB
-
+            try:
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
 
     def p_term_hashtag (p):
             'term : term HASHTAG term'
@@ -145,6 +133,22 @@ def analise(file, quantidade_moleculas):
             except TypeError:
                 pass
 
+    # Addicionar os numeros dos elementos
+
+    def add_coisas(letter, diminuir):
+        letter.upper()
+        try:
+            # if (letter != 'H'):
+            dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - diminuir
+
+        except:
+            dic_elementos['H'] = dic_valorelementos[letter]
+
+        try:
+            dic_elementos[letter] = dic_elementos[letter] + 1
+        except:
+            dic_elementos[letter] = 1
+
     def p_simbolos_juntos(p):
         'term : SIMBOLOS term'
 
@@ -163,7 +167,7 @@ def analise(file, quantidade_moleculas):
 
 
     # for linha in open(file,'r'):
-    for linha in ['HH']:
+    for linha in ['C=C']:
         dic_elementos = {}
         dic_valorelementos = {'C': 4, 'O': 2, 'N': 5, 'S': 2, 'F': 1, 'H': 1, 'B': 4, 'Cl': 7}
         moleculas += 1

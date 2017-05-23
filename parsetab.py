@@ -35,8 +35,8 @@ _lr_productions = [
   ('term -> term SIMBOLOS','term',2,'p_expression_simbolos','mainContagemPronto.py',75),
   ('term -> term SIMBOLOS term','term',3,'p_expression_simbolos_junto','mainContagemPronto.py',78),
   ('term -> ELEMENTO','term',1,'p_expression_nada','mainContagemPronto.py',82),
-  ('term -> term HASHTAG term','term',3,'p_term_hashtag','mainContagemPronto.py',113),
-  ('term -> term SIFRAO term','term',3,'p_term_sifrao','mainContagemPronto.py',131),
-  ('term -> SIMBOLOS term','term',2,'p_simbolos_juntos','mainContagemPronto.py',148),
-  ('term -> NUMBER term','term',2,'p_simbolos','mainContagemPronto.py',151),
+  ('term -> term HASHTAG term','term',3,'p_term_hashtag','mainContagemPronto.py',107),
+  ('term -> term SIFRAO term','term',3,'p_term_sifrao','mainContagemPronto.py',125),
+  ('term -> SIMBOLOS term','term',2,'p_simbolos_juntos','mainContagemPronto.py',142),
+  ('term -> NUMBER term','term',2,'p_simbolos','mainContagemPronto.py',145),
 ]

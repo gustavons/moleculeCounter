@@ -5,7 +5,7 @@ import ply.lex as lex
 tokens = ('NUMBER','ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE')
 
 # Tokens
-t_CEELE = r'l'
+t_CEELE = r'[abcdefghijklmnopqrstuvwxyz]+'
 t_NUMBER = r'\d'
 t_SIMBOLOS = r'[/ \( \) \[ \] \\ @ \+ \-]+'
 t_IGUAL = r'\='
