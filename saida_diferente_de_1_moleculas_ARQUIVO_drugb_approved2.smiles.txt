@@ -1,1 +1,0 @@
-1 {'H': 4, 'C': 2} Soma moleculas: 6

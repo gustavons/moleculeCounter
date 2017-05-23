@@ -117,37 +117,27 @@ def analise(file, quantidade_moleculas):
             except TypeError:
                 pass
     def p_term_sifrao(p):
-            'term :  term SIFRAO term'
-            try:
-                dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
-            except IndexError:
-                dic_elementos[p[3][0].upper()] = 1
-
-            except TypeError:
-                pass
-
-            try:
-                dic_elementos['H'] = dic_elementos['H'] - 6
-            except IndexError:
-                dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
-            except TypeError:
-                pass
+        'term :  term SIFRAO term'
+        add_coisas(p[3][0], 6)
 
     # Addicionar os numeros dos elementos
 
     def add_coisas(letter, diminuir):
         letter.upper()
         try:
-            # if (letter != 'H'):
-            dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - diminuir
+            dic_elementos[letter] = dic_elementos[letter] + 1
+        except IndexError:
+            dic_elementos[letter] = 1
 
-        except:
-            dic_elementos['H'] = dic_valorelementos[letter]
+        except TypeError:
+            pass
 
         try:
-            dic_elementos[letter] = dic_elementos[letter] + 1
-        except:
-            dic_elementos[letter] = 1
+            dic_elementos['H'] = dic_elementos['H'] - diminuir
+        except IndexError:
+            dic_elementos['H'] = dic_valorelementos[letter]
+        except TypeError:
+            pass
 
     def p_simbolos_juntos(p):
         'term : SIMBOLOS term'
@@ -167,7 +157,7 @@ def analise(file, quantidade_moleculas):
 
 
     # for linha in open(file,'r'):
-    for linha in ['C=C']:
+    for linha in ['C$C']:
         dic_elementos = {}
         dic_valorelementos = {'C': 4, 'O': 2, 'N': 5, 'S': 2, 'F': 1, 'H': 1, 'B': 4, 'Cl': 7}
         moleculas += 1
