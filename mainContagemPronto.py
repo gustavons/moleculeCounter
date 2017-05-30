@@ -15,6 +15,49 @@ def analise(file, quantidade_moleculas):
     nao_contado = open(sem_contar_nome_arquivo, 'w')
 
 
+    def p_expression_nada(p):
+        'term : ELEMENTO'
+        for i in range(0, len(p[1])):
+
+            letter = p[1][i].upper()
+            try:
+                # if (letter != 'H'):
+                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+
+            except:
+                dic_elementos['H'] = dic_valorelementos[letter]
+
+            try:
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
+
+    # def p_expression_termo(p):
+    #     'term : menos'
+
+    def p_expression_menos(p):
+        'term : ELEMENTOMINUS'
+
+        for i in range(0, len(p[1])):
+
+            letter = p[1][i].upper()
+            try:
+                # if (letter != 'H'):
+                dic_elementos['H'] = dic_elementos['H'] + int(dic_valorelementos[letter]*0.25)
+
+            except:
+                dic_elementos['H'] = int(dic_valorelementos[letter] * 0.25)
+
+            try:
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
+
+
+
+
+
+
     def p_expression_ceele (p):
             'term : term CEELE term'
             try:
@@ -49,11 +92,6 @@ def analise(file, quantidade_moleculas):
     def p_expression_ce(p):
         'ce : ELEMENTO'
 
-    def p_expression_number (p):
-        'term :  term NUMBER'
-
-    def p_expression_number_junto (p):
-        'term :  term NUMBER term'
 
     def p_expression_simbolos(p):
         'term :  term SIMBOLOS'
@@ -81,22 +119,6 @@ def analise(file, quantidade_moleculas):
         except TypeError:
             pass
 
-    def p_expression_nada(p):
-        'term : ELEMENTO'
-        for i in range(0, len(p[1])):
-
-            letter = p[1][i].upper()
-            try:
-                # if (letter != 'H'):
-                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
-
-            except:
-                dic_elementos['H'] = dic_valorelementos[letter]
-
-            try:
-                dic_elementos[letter] = dic_elementos[letter] + 1
-            except:
-                dic_elementos[letter] = 1
 
     def p_term_hashtag (p):
             'term : term HASHTAG term'
@@ -118,34 +140,33 @@ def analise(file, quantidade_moleculas):
                 pass
     def p_term_sifrao(p):
         'term :  term SIFRAO term'
-        add_coisas(p[3][0], 6)
-
-    # Addicionar os numeros dos elementos
-
-    def add_coisas(letter, diminuir):
-        letter.upper()
         try:
-            dic_elementos[letter] = dic_elementos[letter] + 1
+            dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
         except IndexError:
-            dic_elementos[letter] = 1
+            dic_elementos[p[3][0].upper()] = 1
 
         except TypeError:
             pass
 
         try:
-            dic_elementos['H'] = dic_elementos['H'] - diminuir
+            dic_elementos['H'] = dic_elementos['H'] - 6
         except IndexError:
-            dic_elementos['H'] = dic_valorelementos[letter]
+            dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
         except TypeError:
             pass
+
 
     def p_simbolos_juntos(p):
         'term : SIMBOLOS term'
 
-    def p_simbolos(p):
-        'term : NUMBER term'
+
     def p_error(p):
         print "Syntax error in input!"
+
+    def p_aromatica(p):
+        'term : NUMBER term NUMBER'
+        print 'entrouuuuuuu;........'
+        dic_elementos['H'] = dic_elementos['H'] - 2
         
 
     # Build the parser
@@ -157,9 +178,13 @@ def analise(file, quantidade_moleculas):
 
 
     # for linha in open(file,'r'):
-    for linha in ['C$C']:
+    for linha in ['C12C3C4C1C5C4C3C25']:
         dic_elementos = {}
-        dic_valorelementos = {'C': 4, 'O': 2, 'N': 5, 'S': 2, 'F': 1, 'H': 1, 'B': 4, 'Cl': 7}
+        dic_valorelementos = {'H': 1,'Li': 1, 'Na':1, 'K': 1, 'Rb': 1, 'Cs': 1, 'Fr': 1, 'Cl':1,
+
+                              'C':4,
+
+                              }
         moleculas += 1
         codigo_linha +=1
         try:

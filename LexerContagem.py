@@ -2,7 +2,7 @@
 # Analizador lexico
 # ------------------------------------------------------------
 import ply.lex as lex
-tokens = ('NUMBER','ELEMENTO', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE')
+tokens = ('NUMBER','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE')
 
 # Tokens
 t_CEELE = r'[abcdefghijklmnopqrstuvwxyz]+'
@@ -15,9 +15,17 @@ t_HASHTAG = r'\#'
 # A string containing ignored characters
 t_ignore = '\t\n'
 
+def t_ELEMENTOMINUS(t):
+    r'[abc]+'
+    try:
+        t.value = t.value
+    except ValueError:
+        # print "nao foi %d: Number %s is too large!" % (t.lineno,t.value)
+        t.value = 0
+    return t
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
-    r'[CONSFHBconsfhb]+'
+    r'[CONSFHBK]+'
     try:
          t.value = t.value
     except ValueError:
