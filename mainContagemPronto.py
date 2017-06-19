@@ -163,11 +163,23 @@ def analise(file, quantidade_moleculas):
     def p_error(p):
         print "Syntax error in input!"
 
+
+    def p_ciclo(p):
+        'term : term term'
+
+
     def p_aromatica(p):
-        'term : NUMBER term NUMBER'
+        'term : term NUMBER'
         print 'entrouuuuuuu;........'
-        dic_elementos['H'] = dic_elementos['H'] - 2
-        
+        try:
+            if(int(p.stack[4].value) in [1,2,3,4,5,6,7,8,9,0]):
+
+                dic_elementos['H'] = dic_elementos['H'] - 1
+            else:
+                dic_elementos['H'] = dic_elementos['H'] - 1
+        except:
+            dic_elementos['H'] = dic_elementos['H'] - 1
+
 
     # Build the parser
     yacc.yacc(debug=True)
@@ -178,7 +190,7 @@ def analise(file, quantidade_moleculas):
 
 
     # for linha in open(file,'r'):
-    for linha in ['C12C3C4C1C5C4C3C25']:
+    for linha in ['C1CC2CCCCC2CC1']:
         dic_elementos = {}
         dic_valorelementos = {'H': 1,'Li': 1, 'Na':1, 'K': 1, 'Rb': 1, 'Cs': 1, 'Fr': 1, 'Cl':1,
 
