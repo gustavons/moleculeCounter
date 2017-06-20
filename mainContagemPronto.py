@@ -192,10 +192,12 @@ def analise(file, quantidade_moleculas):
     # for linha in open(file,'r'):
     for linha in ['C1CC2CCCCC2CC1']:
         dic_elementos = {}
-        dic_valorelementos = {'H': 1,'Li': 1, 'Na':1, 'K': 1, 'Rb': 1, 'Cs': 1, 'Fr': 1, 'Cl':1,
-
-                              'C':4,
-
+        dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
+                              'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
+                              'C' : 4, 'Si' : 4, 'Ge' : 4, 'Sn' : 4, 'Pb' : 4,
+                              'N' : 3, 'P' : 3, 'As' : 3, 'Sb' : 3, 'Bi' : 3,
+                              'O' : 2, 'S' : 2, 'Se' : 2, 'Te' : 2, 'Po' : 2,
+                              'F' : 1, 'Cl' : 1, 'Br' : 1, 'I' : 1, 'At' : 1
                               }
         moleculas += 1
         codigo_linha +=1
@@ -207,13 +209,15 @@ def analise(file, quantidade_moleculas):
 
                 ## Abre arquivo de saida e insere o valor no arquivo de saida de sucesso
                 sucesso = open(nome_arquivo_sucesso, 'a+')
-                sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))+ '\n')
+                sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                   +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
                 sucesso.close()
 
             else:
                 ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
                 insucesso = open(sem_sucesso_nome_arquivo, 'a+')
-                insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))+ '\n')
+                insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                     +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
                 insucesso.close()
         except:
             ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
@@ -233,6 +237,24 @@ def somar_lista(lista):
         soma += int(i)
 
     return soma
+
+
+def set_massa_molar(dic_com_dados):
+    mol = {'H' : 1.00794, 'Li' : 6.941, 'Be' : 9.012182, 'B': 10.811, 'C': 12.0107, 'N': 14.00674, 'O': 15.9994,
+           'F': 18.9984, 'Na' : 22.989770, 'Mg' : 24.3050, 'Al' : 26.981538, 'Si' : 28.0855, 'P': 30.973761,
+           'S': 32.066, 'Cl' : 35.453, 'K': 39.0983, 'Ca' : 40.078, 'Ga' : 69.723, 'Ge' : 72.64, 'As' : 74.92160,
+           'Se' : 78.96, 'Br' : 79.904, 'Rb' : 85.4678, 'Sr' : 87.62, 'In' : 114.818, 'Sn' : 118.710, 'Sb' : 121.760,
+           'Te' : 127.60, 'I': 126.90447, 'Cs' : 132.90545, 'Ba' : 137.327, 'Ti' : 204.3833, 'Pb' : 207.3,
+           'Bi' : 208.98038, 'Po' : 209, 'At' : 210, 'Fr' : 223, 'Ra' : 226}
+    massa_molar = 0
+
+    for elemento in dic_com_dados.keys():
+        massa_molar += dic_com_dados[elemento] * mol[elemento]
+
+    return massa_molar
+
+
+
 if __name__ == "__main__":
     # Nome do arquivo
     file = 'drugb_approved2.smiles'
