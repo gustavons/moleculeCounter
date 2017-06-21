@@ -21,8 +21,8 @@ def analise(file, quantidade_moleculas):
 
             letter = p[1][i].upper()
             try:
-                # if (letter != 'H'):
-                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+                if (letter != 'H'):
+                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
 
             except:
                 dic_elementos['H'] = dic_valorelementos[letter]
@@ -42,44 +42,27 @@ def analise(file, quantidade_moleculas):
 
             letter = p[1][i].upper()
             try:
-                # if (letter != 'H'):
-                dic_elementos['H'] = dic_elementos['H'] + int(dic_valorelementos[letter]*0.25)
-
-            except:
-                dic_elementos['H'] = int(dic_valorelementos[letter] * 0.25)
-
-            try:
                 dic_elementos[letter] = dic_elementos[letter] + 1
             except:
                 dic_elementos[letter] = 1
 
 
-
-
-
-
-    def p_expression_ceele (p):
-            'term : term CEELE term'
             try:
-                dic_elementos['Cl'] = dic_elementos['Cl'] + 1
+                dic_elementos['H'] = dic_elementos['H'] +1
+
+
             except:
-                dic_elementos['Cl'] = 1
 
+                dic_elementos['H'] = int(dic_valorelementos[letter]*0.75)
 
-            try:
-                dic_elementos['H'] = dic_elementos['H'] - 1
-
-
-            except :
-                dic_elementos['H'] = dic_valorelementos['Cl']
 
     def p_so_ceele(p):
-        'term : ce CEELE'
+        'term : CEELE'
 
         try:
-            dic_elementos['Cl'] = dic_elementos['Cl'] + 1
+            dic_elementos[p[1]] = dic_elementos[p[1]] + 1
         except:
-            dic_elementos['Cl'] = 1
+            dic_elementos[p[1]] = 1
 
 
         try:
@@ -87,7 +70,7 @@ def analise(file, quantidade_moleculas):
 
 
         except :
-            dic_elementos['H'] = dic_valorelementos['Cl']
+            dic_elementos['H'] = dic_valorelementos[p[1]]
 
     def p_expression_ce(p):
         'ce : ELEMENTO'
@@ -170,15 +153,7 @@ def analise(file, quantidade_moleculas):
 
     def p_aromatica(p):
         'term : term NUMBER'
-        print 'entrouuuuuuu;........'
-        try:
-            if(int(p.stack[4].value) in [1,2,3,4,5,6,7,8,9,0]):
-
-                dic_elementos['H'] = dic_elementos['H'] - 1
-            else:
-                dic_elementos['H'] = dic_elementos['H'] - 1
-        except:
-            dic_elementos['H'] = dic_elementos['H'] - 1
+        dic_elementos['H'] = dic_elementos['H'] - 1
 
 
     # Build the parser
@@ -189,8 +164,8 @@ def analise(file, quantidade_moleculas):
     codigo_linha = 0
 
 
-    # for linha in open(file,'r'):
-    for linha in ['C1CC2CCCCC2CC1']:
+    for linha in open(file,'r'):
+    # for linha in ['Ge$C']:
         dic_elementos = {}
         dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
                               'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
