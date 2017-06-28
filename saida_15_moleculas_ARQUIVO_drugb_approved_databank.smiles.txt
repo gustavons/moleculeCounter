@@ -1,7 +1,0 @@
-148 {'H': 8, 'C': 3, 'O': 2, 'N': 2} Soma moleculas: 15
-150 {'H': 5, 'C': 3, 'Cl': 2, 'O': 2, 'N': 3} Soma moleculas: 15
-626 {'H': 8, 'C': 4, 'S': 1, 'N': 2} Soma moleculas: 15
-948 {'H': 6, 'C': 4, 'F': 1, 'O': 1, 'N': 3} Soma moleculas: 15
-1079 {'H': 3, 'C': 4, 'O': 1, 'F': 7} Soma moleculas: 15
-1295 {'H': 8, 'C': 6, 'O': 1} Soma moleculas: 15
-1431 {'H': 8, 'C': 5, 'N': 2} Soma moleculas: 15

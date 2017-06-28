@@ -1,1 +1,0 @@
-1014 {'H': -4, 'As': 2, 'O': 3} Soma moleculas: 1 Massa Molar: 193.80964
