@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import ply.yacc as yacc
 
 from LexerContagem import tokens
@@ -9,12 +11,13 @@ def analise(file, quantidade_moleculas):
     sem_sucesso_nome_arquivo = 'saida_diferente_de_' + str(quantidade_moleculas) + '_moleculas_ARQUIVO_' + file + '.txt'
     sem_contar_nome_arquivo = 'nao_contado_moleculas_ARQUIVO_' + file + '.txt'
 
-
+    # Abrir para escriver no arquivo
     sucesso = open(nome_arquivo_sucesso, 'w')
     insucesso = open(sem_sucesso_nome_arquivo, 'w')
     nao_contado = open(sem_contar_nome_arquivo, 'w')
 
 
+    # definir o valor de cada elemento
     def p_expression_nada(p):
         'term : ELEMENTO'
         for i in range(0, len(p[1])):
@@ -32,9 +35,7 @@ def analise(file, quantidade_moleculas):
             except:
                 dic_elementos[letter] = 1
 
-    # def p_expression_termo(p):
-    #     'term : menos'
-
+    # Definir o valor de cada elemento de uma cadeia ciclica
     def p_expression_menos(p):
         'term : ELEMENTOMINUS'
 
@@ -56,8 +57,9 @@ def analise(file, quantidade_moleculas):
                 dic_elementos['H'] = int(dic_valorelementos[letter]*0.75)
 
 
-    def p_so_ceele(p):
-        'term : CEELE'
+    # Definir o valor de cada elemento que tem seu smimbolo com duas letras
+    def p_elemento_com_duas_letras(p):
+        'term : ELEMENTODUASLETRAS'
 
         try:
             dic_elementos[p[1]] = dic_elementos[p[1]] + 1
@@ -72,13 +74,10 @@ def analise(file, quantidade_moleculas):
         except :
             dic_elementos['H'] = dic_valorelementos[p[1]]
 
-    def p_expression_ce(p):
-        'ce : ELEMENTO'
 
-
+    # As duas funções abaixo são para trabalhar com simbolos
     def p_expression_simbolos(p):
         'term :  term SIMBOLOS'
-
     def p_expression_simbolos_junto(p):
         'term :  term SIMBOLOS term'
 
@@ -146,10 +145,8 @@ def analise(file, quantidade_moleculas):
     def p_error(p):
         print "Syntax error in input!"
 
-
     def p_ciclo(p):
         'term : term term'
-
 
     def p_aromatica(p):
         'term : term NUMBER'
@@ -163,9 +160,8 @@ def analise(file, quantidade_moleculas):
     moleculas = 0
     codigo_linha = 0
 
-
+    # função para realizar o processamento
     for linha in open(file,'r'):
-    # for linha in ['Ge$C']:
         dic_elementos = {}
         dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
                               'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
@@ -213,7 +209,7 @@ def somar_lista(lista):
 
     return soma
 
-
+# função para calculo da massa molar
 def set_massa_molar(dic_com_dados):
     mol = {'H' : 1.00794, 'Li' : 6.941, 'Be' : 9.012182, 'B': 10.811, 'C': 12.0107, 'N': 14.00674, 'O': 15.9994,
            'F': 18.9984, 'Na' : 22.989770, 'Mg' : 24.3050, 'Al' : 26.981538, 'Si' : 28.0855, 'P': 30.973761,
@@ -233,7 +229,8 @@ def set_massa_molar(dic_com_dados):
 if __name__ == "__main__":
     # Nome do arquivo
     file = 'drugb_approved2.smiles'
-    # Captura o numero de atomos
-    # numero_atomos = int(input("Digite o numero de atomos: "))
 
-    analise(file, 1)
+    # Captura o numero de atomos
+    numero_atomos = int(input("Digite o numero de atomos: "))
+
+    analise(file, numero_atomos)

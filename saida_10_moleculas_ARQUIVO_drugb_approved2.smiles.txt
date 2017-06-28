@@ -1,0 +1,5 @@
+12 {'H': 4, 'C': 3, 'O': 3} Soma moleculas: 10 Massa Molar: 88.06206
+36 {'H': 5, 'C': 2, 'O': 2, 'N': 1} Soma moleculas: 10 Massa Molar: 75.06664
+418 {'H': 5, 'C': 2, 'O': 2, 'N': 1} Soma moleculas: 10 Massa Molar: 75.06664
+626 {'H': 3, 'S': 1, 'C': 4, 'N': 2} Soma moleculas: 10 Massa Molar: 111.1461
+948 {'H': 1, 'C': 4, 'N': 3, 'O': 1, 'F': 1} Soma moleculas: 10 Massa Molar: 126.06876

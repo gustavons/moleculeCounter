@@ -1,11 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # ------------------------------------------------------------
 # Analizador lexico
 # ------------------------------------------------------------
 import ply.lex as lex
-tokens = ('NUMBER','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'CEELE')
+tokens = ('NUMBER','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'ELEMENTODUASLETRAS')
 
 # Tokens
-t_CEELE = r'(\b(Li)|(Na)|(Rb)|(Cs)|(Fr)|(Be)|(Mg)|(Ca)|(Sr)' \
+t_ELEMENTODUASLETRAS = r'(\b(Li)|(Na)|(Rb)|(Cs)|(Fr)|(Be)|(Mg)|(Ca)|(Sr)' \
           r'|(Ba)|(Ka)|(Al)|(Ga)|(In)|(Ti)|(Si)|(Ge)|(Sn)|(Pb)' \
           r'|(As)|(Sb)|(Bi)|(Se)|(Te)|(Po)|(Cl)|(Br)|(At)\b)'
 t_NUMBER = r'\d'
@@ -15,10 +18,10 @@ t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
 
 # A string containing ignored characters
-t_ignore = '\t\n:'
+t_ignore = '\t\n:+-.'
 
 def t_ELEMENTOMINUS(t):
-    r'[abcdefghijklmnopqrstuvwxyz]+'
+    r'[hkbcnposfi]+'
     try:
         t.value = t.value
     except ValueError:
@@ -27,7 +30,7 @@ def t_ELEMENTOMINUS(t):
     return t
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
-    r'[CONSFHBK]'
+    r'[HKBCNPOSFI]'
     try:
          t.value = t.value
     except ValueError:

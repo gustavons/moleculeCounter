@@ -4,21 +4,11 @@
 
 4   c12c(cccc1)ccc(c2)C[C@@H](NC(=O)C)C(=O)N[C@@H](C(=O)N[C@H](Cc1cccnc1)C(=O)N[C@H](C(=O)N[C@@H](Cc1ccc(cc1)O)C(=O)N[C@@H](C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](C(=O)N1[C@H](C(=O)N[C@@H](C(=O)N)C)CCC1)CCCNC(=N)N)CCCNC(=O)N)CO)Cc1ccc(cc1)Cl	[NO NAME]
 
-8   C12=C(C3=[N]4C(=CC5=[N]6C(=C(C7=[N]8[C@]([C@@]([C@@H]7CCC(=O)N)(C)CC(=O)N)([C@@H]7N1[Co]468(n1c4cc(C)c(cc4n(c1)[C@H]1O[C@H](CO)[C@H]([C@H]1O)OP(=O)(O)O[C@@H](CNC(=O)CC[C@@]2([C@H]7CC(=O)N)C)C)C)C#N)C)C)[C@@]([C@@H]5CCC(=O)N)(C)CC(=O)N)C([C@@H]3CCC(=O)N)(C)C)C	
-
-23   P(=O)(OC[C@H]1O[C@@H](n2c3ncnc(N)c3nc2)[C@H](O)[C@@H]1O)(O)O	131
-
-35   P(=O)(OC[C@H](OC(=O)CCC)COC(=O)CC)(OC[C@H](N)C(=O)O)O	6323481
-
-60   Nc1ncnc2c1ncn2[C@@H]1O[C@@H]([C@@H](O)[C@H]1O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O	
-
 70   Clc1ccc(C(CC(=O)O)CN)cc1	181
 
 75   Clc1cc2C(=NC(O)C(=O)Nc2cc1)c1c(Cl)cccc1	186
 
 78   C(C(C=CCl)(C#C)O)C	
-
-88   C12=C(C3=[N]4C(=CC5=[N]6C(=C(C7=[N]8[C@]([C@@H]9N1[Co+]468(n1c4cc(C)c(cc4n(c1)[C@H]1O[C@H](CO)[C@H]([C@H]1O)OP(=O)(O[C@@H](CNC(=O)CC[C@]2(C)[C@H]9CC(=O)N)C)[O-])C)O)(C)[C@]([C@@H]7CCC(=O)N)(CC(=O)N)C)C)[C@@]([C@@H]5CCC(=O)N)(C)CC(=O)N)C([C@@H]3CCC(=O)N)(C)C)C	
 
 93   Clc1ccc(c2c(nc(nc2N)N)CC)cc1	205
 
@@ -42,8 +32,6 @@
 
 134   Clc1c(CCN2CCN(CC2)c2nsc3c2cccc3)cc2c(NC(=O)C2)c1	246
 
-137   Ic1cn([C@@H]2O[C@@H]([C@@H](O)C2)CO)c(=O)[nH]c1=O	249
-
 139   Clc1c([C@@]2(O[C@H](CO2)COc2ccc(N3CCN(CC3)C(C)C)cc2)Cn2ncnc2)ccc(Cl)c1	251
 
 145   Clc1c(C(n2ccnc2)(c2ccccc2)c2ccccc2)cccc1	257
@@ -54,12 +42,6 @@
 
 150   ClCCN(N=O)C(=O)NCCCl	262
 
-158   Ic1c(NC(=O)C)c(I)c(c(I)c1NC(=O)C)C(=O)O	2140
-
-166   Ic1cc(C[C@H](N)C(=O)O)cc(I)c1Oc1cc(I)c(O)cc1	279
-
-169   P(=O)(O)(O)C(P(=O)(O)O)(O)CCN	282
-
 170   Clc1ccc([C@](OCC[C@@H]2N(CCC2)C)(c2ccccc2)C)cc1	26987
 
 171   [C@H]1([C@H](O[C@@H]([C@@H]([C@H]1O)O)O[C@@H]1[C@H](O[C@H]([C@@H]([C@H]1O)O)O)CO)CO)O[C@@H]1[C@@H]([C@H]([C@@H]([C@H](O1)C)N[C@H]1C=C([C@@H]([C@@H]([C@H]1O)O)O)CO)O)O	ChEBI
@@ -68,13 +50,9 @@
 
 178   ClCCN(c1ccc(CCCC(=O)O)cc1)CCCl	291
 
-187   P(=O)(O)(O)CO[C@@H](Cn1c2ncnc(N)c2nc1)C	464205
-
 188   Clc1c(c2noc(c2C(=O)N[C@H]2[C@H]3SC([C@@H](N3C2=O)C(=O)O)(C)C)C)c(F)ccc1	301
 
 197   Clc1c(S(=O)(=O)N)cc(C2(O)NC(=O)c3c2cccc3)cc1	310
-
-200   O=C1NC[C@H](N)C(=O)N[C@H](C(=O)N[C@@H](CNC(=O)C[C@@H](N)CCCN)C(=O)N/C(=C/NC(=O)N)/C(=O)N[C@H]1[C@@H]1NC(=NCC1)N)CO.O=C1NC[C@H](N)C(=O)N[C@H](C(=O)N[C@@H](CNC(=O)C[C@@H](N)CCCN)C(=O)N/C(=C/NC(=O)N)/C(=O)N[C@H]1[C@@H]1NC(=NCC1)N)C	3000502
 
 203   Clc1cc(Nc2ncnc3c2cc(OCCCN2CCOCC2)c(OC)c3)ccc1F	317
 
@@ -98,8 +76,6 @@
 
 247   C1(=Nc2c(Nc3c1cccc3)ccc(c2)Cl)N1CCN(CC1)C	
 
-252   P(=O)(O)(O)CO[C@@H](Cn1ccc(nc1=O)N)CO	369
-
 257   ClCC1OC1.N(CCNCCN)CCNCCN	375
 
 263   Clc1c(C2C(=C(NC(=C2C(=O)OC)C)COCCN)C(=O)OCC)cccc1	381
@@ -107,8 +83,6 @@
 274   [C@@]12(C(=CC(=O)C=C2)CC[C@@H]2[C@@]1([C@@H](O)C[C@@]1(C)[C@H]2C[C@H](C)[C@@]1(C(=O)COC(=O)CC)OC(=O)CC)Cl)C	[NO NAME]
 
 278   Clc1c(cc(NC(=O)Nc2ccc(Oc3cc(ncc3)C(=O)NC)cc2)cc1)C(F)(F)F	398
-
-279   P(=O)(O)(O)C(P(=O)(O)O)(O)Cn1ccnc1	68740
 
 280   Clc1c2O[C@]3([C@@H](CC(=O)C=C3OC)C)C(=O)c2c(OC)cc1OC	400
 
@@ -124,15 +98,11 @@
 
 290   C([N+](C)(C)C)COC(=O)N.[Cl-]	51-83-2
 
-306   C1[C@H](O)[C@H](C/C=C\CCCC(=O)[O-])[C@H]([C@H]1O)/C=C/[C@](CCCCC)(O)C.OCC(CO)([NH3+])CO	
-
 308   [C@H]1([C@H]([C@@H]([C@@H]([C@H]([C@@H]1Cl)Cl)Cl)Cl)Cl)Cl	
 
 310   Clc1cc2N(CCCN3CCN(CC3)C)c3c(Sc2cc1)cccc3	433
 
 322   c1c(ccc(c1)[N+](=O)[O-])[C@H]([C@H](NC(=O)C(Cl)Cl)CO)O	
-
-326   Ic1cc(C[C@H](N)C(=O)O)cc(I)c1Oc1cc(I)c(O)c(I)c1	451
 
 328   c1cc(c2c(c1Cl)[C@@]([C@@H]1C(=C([C@]3([C@@H](C1)[C@@H](C(=C(C3=O)C(=O)NCO)O)N(C)C)O)O)C2=O)(C)O)O	
 
@@ -148,31 +118,21 @@
 
 350   Clc1cc2N(CCCN(C)C)c3c(Sc2cc1)cccc3	477
 
-356   O(CC[N+](CC)(CC)CC)c1c(OCC[N+](CC)(CC)CC)cccc1OCC[N+](CC)(CC)CC.[I-].[I-].[I-]	483
-
 357   Brc1c(NC2=NCCN2)ccc2nccnc12	484
 
 358   Clc1c(c2noc(c2C(=O)N[C@H]2[C@H]3SC([C@@H](N3C2=O)C(=O)O)(C)C)C)c(Cl)ccc1	485
 
-365   P(=O)(OC(OC(=O)CC)C(C)C)(CC(=O)N1C[C@H](C2CCCCC2)C[C@H]1C(=O)O)CCCCc1ccccc1	492
-
 375   Clc1ccc(C2(O)CCN(CC2)CCCC(=O)c2ccc(F)cc2)cc1	502
-
-380   c1(cc(c(c(c1)I)Oc1cc(I)c(O)c(c1)I)I)C[C@H](C(=O)O)N	
 
 382   c1(c2cc3cc1Oc1c(Cl)cc([C@@H](O)[C@@H]4NC(=O)[C@H](NC(=O)[C@@H]3NC(=O)[C@@H](NC(=O)[C@@H]([C@@H](c3cc(c(O2)cc3)Cl)O)NC(=O)[C@@H](CC(C)C)NC)CC(=O)N)c2cc(c(cc2)O)c2c([C@@H](C(=O)O)NC4=O)cc(cc2O)O)cc1)O[C@H]1[C@@H]([C@H]([C@@H]([C@H](O1)CO)O)O)O[C@H]1C[C@@]([C@@H]([C@@H](O1)C)O)(N)C	
 
 385   Cl[Pt](Cl)(N)N	
-
-386   [Si](=O)=O.[Al](=O)O[Al]=O.O	
 
 387   O(C(=O)C(CCC)CCC)[C@@H]1CC2[N+](C(C1)CC2)(C)C.[Br-]	
 
 393   Clc1cc2NC(N(C(=O)c2cc1S(=O)(=O)N)c1c(cccc1)C)C	524
 
 395   C1CCC[C@@H]2[C@@H]1N[Pt]1(N2)OC(=O)C(=O)O1	
-
-398   P(=O)(O)(O)C(=O)O	
 
 400   ClCCN(P1(=O)OCCCN1)CCCl	531
 
@@ -194,8 +154,6 @@
 
 429   Clc1c(S(=O)(=O)N)cc2S(=O)(=O)N=C(Nc2c1)CSCc1ccccc1	562
 
-432   S(=O)(=O)([O-])c1ccccc1.S(=O)(=O)([O-])c1ccccc1.O(c1cc2[C@H]([N@+](CCc2cc1OC)(CCC(=O)OCCCCCOC(=O)CC[N@@+]1([C@@H](c2c(CC1)cc(OC)c(OC)c2)Cc1cc(OC)c(OC)cc1)C)C)Cc1cc(OC)c(OC)cc1)C	565
-
 436   [C@H]1([C@@H]([C@H]([C@@H]([C@H](O1)COS(=O)(=O)[O-])O)O)NS(=O)(=O)[O-])O[C@H]1[C@@H]([C@H]([C@@H](O[C@@H]1C(=O)O)O[C@H]1[C@@H]([C@H]([C@H](O[C@@H]1COS(=O)(=O)[O-])O[C@H]1[C@@H]([C@H]([C@@H](O[C@H]1C(=O)O)O[C@H]1[C@@H]([C@H]([C@H](O[C@@H]1COS(=O)(=O)[O-])OC)NS(=O)(=O)[O-])O)OS(=O)(=O)[O-])O)NS(=O)(=O)[O-])OS(=O)(=O)[O-])O)O.[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+]	
 
 441   Clc1c(NC2=NCCN2)c(Cl)ccc1	575
@@ -209,8 +167,6 @@
 461   [C@]12([C@@]3([C@H]([C@H]4[C@@]([C@]([C@H](C4)C)(C(=O)CCl)O)(C[C@@H]3O)C)C[C@@H](C1=CC(=O)C=C2)F)F)C	
 
 462   [Gd+3].OC(CN1CCN(CCN(CCN(CC1)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])C	60714
-
-467   CO[C@H]1C[C@@H](O[C@@H](C)[C@@H]1O)O[C@H]1[C@H](C)O[C@H](C[C@@H]1OC)O[C@H]1[C@@H](C)/C=C/C=C/2\CO[C@@H]3[C@H](O)C(=C[C@@H](C(=O)O[C@H]4C[C@@H](C/C=C/1\C)O[C@@]1(CC[C@H](C)[C@H](O1)C(C)C)C4)[C@]23O)C.CC[C@@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)/[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C/3\CO[C@@H]4[C@H](O)C(=C[C@@H](C(=O)O1)[C@]34O)C)O2	
 
 469   c1(C(=O)N[C@H]2[C@H](CN(CC2)CCCOc2ccc(F)cc2)OC)c(cc(c(c1)Cl)N)OC	
 
@@ -228,8 +184,6 @@
 
 493   Clc1c(c(Cl)ccc1)C=NN=C(N)N	629
 
-494   P(=O)(O)(O)C(P(=O)(O)O)(O)CCCN	630
-
 495   Clc1nc2n([C@@H]3O[C@@H]([C@@H](O)[C@@H]3F)CO)cnc2c(n1)N	631
 
 500   Clc1ccc(OC(C)(C)C(=O)OCC)cc1	636
@@ -240,17 +194,11 @@
 
 512   ClC(Cl)C(c1ccc(Cl)cc1)c1c(Cl)cccc1	648
 
-517   [Mg+2].[O-]S(=O)(=O)[O-]	
-
 520   Clc1cc(N2CCN(CC2)CCCn2nc3n(c2=O)cccc3)ccc1	656
 
 522   ClCC1OC1.NCC=C	658
 
-531   P(=O)(O)(O)O.P(=O)(O)(O)O.[nH]1c(CCN)cnc1	667
-
 536   Clc1ccc(S(=O)(=O)NC(=O)NCCC)cc1	672
-
-541   P(=O)(F)(OC(C)C)OC(C)C	677
 
 542   Clc1nc(n(Cc2ccc(cc2)c2c(cccc2)c2n[nH]nn2)c1CO)CCCC	678
 
@@ -264,17 +212,9 @@
 
 563   Brc1cc(C(=O)OC[C@@H]2C[C@@]3(OC)[C@H](N(C2)C)Cc2c4c3cccc4n(c2)C)cnc1	699
 
-573   P(=O)(O)(O)C(P(=O)(O)O)(O)CCN(CCCCC)C	710
-
-581   P(=O)(OCOC(=O)C(C)(C)C)(OCOC(=O)C(C)(C)C)COCCn1c2ncnc(N)c2nc1	718
-
 583   ClC(Cl)(P(=O)(O)O)P(=O)(O)O	720
 
 588   O(C(=O)C(O)c1ccccc1)C1CC2[N+](C(C1)CC2)(C)C.[Br-]	
-
-592   S(=O)(=O)(OC)[O-].[N+]1(CCC(=C(c2ccccc2)c2ccccc2)CC1)(C)C	729
-
-595   S(=O)(=O)([O-])c1ccccc1.S(=O)(=O)([O-])c1ccccc1.O(c1cc2C([N+](CCc2cc1OC)(CCC(=O)OCCCCCOC(=O)CC[N+]1(C(c2c(CC1)cc(OC)c(OC)c2)Cc1cc(OC)c(OC)cc1)C)C)Cc1cc(OC)c(OC)cc1)C	
 
 600   Clc1ccc(C(N2CCN(CC2)Cc2cc(ccc2)C)c2ccccc2)cc1	737
 
@@ -296,8 +236,6 @@
 
 627   C1[C@@H]2[C@@]([C@@]3(C(=CC(=O)C=C3)C1)C)([C@H](C[C@@]1([C@]([C@@H](C[C@@H]21)C)(C(=O)CCl)O)C)O)Cl	
 
-634   S(P(=S)(OC)OC)C(CC(=O)OCC)C(=O)OCC	772
-
 650   [Gd+3].O[C@@H]([C@H](O)[C@H](O)CO)[C@@H](O)CNC.O[C@@H]([C@H](O)[C@H](O)CO)[C@@H](O)CNC.[O-]C(=O)CN(CCN(CC(=O)O)CC(=O)[O-])CCN(CC(=O)O)CC(=O)[O-]	789
 
 652   ClCCN(CCCl)c1c(=O)[nH]c(=O)[nH]c1	791
@@ -315,8 +253,6 @@
 682   Clc1cc2c3c([nH]c2cc1)cc(C(C)C(=O)O)cc3	821
 
 686   CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O	menthol
-
-689   P(=O)(O)(O)[C@H]1O[C@H]1C	828
 
 690   Clc1cc2c(N(C(=O)CN=C2c2ccccc2)C)cc1	829
 
@@ -348,11 +284,7 @@
 
 741   c1cccc(c1)C(=C(Cl)c1ccccc1)c1ccc(cc1)OCCN(CC)CC	
 
-743   P(=O)(O)(O)C(P(=O)(O)O)(O)Cc1cccnc1	884
-
 746   ClCCN(CCCl)C	888
-
-752   C(=O)([C@@H](CCCCNC(=O)C(NC(=O)Cc1ccccc1)[C@H]1SC([C@@H](N1)C(=O)O)(C)C)N)O.C(=O)([C@@H](CCCCN)N)O	
 
 754   Clc1cc2c(n3c(nnc3C)CN=C2c2c(Cl)cccc2)cc1	897
 
@@ -400,17 +332,9 @@
 
 890   Clc1ccc(C(=O)c2ccc(OC(C)(C)C(=O)OC(C)C)cc2)cc1	1039
 
-891   C(=Cc1ccc(cc1O)C(=N)N)c1ccc(cc1)C(=N)N.C(CS(=O)(=O)O)O.C(CS(=O)(=O)O)O	
-
 893   c1(N(CCCl)CCCl)ccc(cc1)C[C@@H](C(=O)O)N	
 
-900   c1ccc2[nH]cc3c2c1[C@@H]1[C@@H](C3)N(C[C@@H](C1)C(=O)N[C@]1(C(=O)N2[C@@](O1)([C@H]1N(C(=O)[C@@H]2C)CCC1)O)C(C)C)C.OS(=O)(=O)C	
-
-907   S(P(=O)(OCC)OCC)CC[N+](C)(C)C	1057
-
 918   Clc1c(C2=NCC(=O)Nc3c2cc([N+](=O)[O-])cc3)cccc1	1068
-
-927   C(P(=O)(O)O)(P(=O)(O)O)(C)O	
 
 952   Clc1cc2nc3c(c(NC(CCCN(CC)CC)C)c2cc1)cc(OC)cc3	1103
 
@@ -424,8 +348,6 @@
 
 965   C1(=C(C(=O)c2c(C1=O)cccc2)O)[C@@H]1CC[C@H](CC1)c1ccc(cc1)Cl	
 
-966   Ic1c(OCCN(CC)CC)c(I)cc(C(=O)c2c(oc3c2cccc3)CCCC)c1	1118
-
 967   Clc1cc2S(=O)(=O)N=C(Nc2cc1)C	1119
 
 970   Clc1c(C[N+](CCNC(=O)C(=O)NCC[N+](Cc2c(Cl)cccc2)(CC)CC)(CC)CC)cccc1	1122
@@ -437,8 +359,6 @@
 981   Clc1ccc(SC(P(=O)(O)O)P(=O)(O)O)cc1	1133
 
 982   c12c(cc(c(c1OC)OC)OC)CC[N@+]([C@@H]2Cc1cc(c(c(c1)OC)OC)OC)(CCCOC(=O)CCC(=O)OCCC[N@@+]1([C@H](c2c(CC1)cc(c(c2OC)OC)OC)Cc1cc(c(c(c1)OC)OC)OC)C)C.[Cl-].[Cl-]	
-
-990   S(P(=O)(O)O)CCNCCCN	1143
 
 991   Clc1c(S(=O)(=O)N)cc(S(=O)(=O)N)cc1Cl	1144
 
@@ -454,8 +374,6 @@
 
 1005   BrC(Cl)C(F)(F)F	
 
-1006   O[C@@H]1[C@@H]([C@H]([C@H](O)C1)/C=C/[C@@H](O)CCCCC)C/C=C\CCCC(=O)O.OCC(N)(CO)CO	1160
-
 1007   Clc1c(C(=O)OCCN(CC)CC)ccc(N)c1	1161
 
 1009   [Ca+2].[Cl-].[Cl-]	
@@ -469,8 +387,6 @@
 1026   ClCCN1P(=O)(OCCC1)NCCCl	1181
 
 1029   Clc1cc2[nH]c(=O)n(C3CCN(CC3)CCCn3c4c([nH]c3=O)cccc4)c2cc1	1184
-
-1032   Ic1c(C(CCCCCCCCC(=O)OCC)C)cccc1	1187
 
 1035   O1[C@@H]([C@H](O)[C@@H](O)[C@@H](O)[C@H]1C(C(C)Cl)NC(=O)[C@@H]1C[C@H](CN1C)CCC)SC	
 
@@ -488,8 +404,6 @@
 
 1066   Clc1c(C2(NC)CCCCC2=O)cccc1	1221
 
-1068   O=c1n(c(=O)n(c2nc[nH]c12)C)C.O=c1n(c(=O)n(c2nc[nH]c12)C)C.NCCN	1223
-
 1076   Clc1cc(C(=O)NCCN(CC)CC)c(OC)cc1N	1233
 
 1080   Brc1ccc(C(OCCN(C)C)c2ccccc2)cc1	1237
@@ -502,35 +416,21 @@
 
 1086   Clc1c2c(nccc2)c(O)c(Cl)c1	1243
 
-1092   Ic1c(N(CC(O)CN(c2c(I)c(c(I)c(c2I)C(=O)NCC(O)CO)C(=O)NCC(O)CO)C(=O)C)C(=O)C)c(I)c(c(I)c1C(=O)NCC(O)CO)C(=O)NCC(O)CO	1249
-
 1097   Clc1c(NC(=O)c2sc(Nc3nc(nc(N4CCN(CC4)CCO)c3)C)nc2)c(ccc1)C	1254
 
 1100   Clc1cc(Nc2ncnc3c2cc(c2oc(CNCCS(=O)(=O)C)cc2)cc3)ccc1OCc1cc(F)ccc1	1259
 
 1114   c1(c(cccc1Cl)F)Nc1ccc(cc1CC(=O)O)C	
 
-1125   c12c(n(c(=O)n(c1=O)C)C)nc[n-]2.C[N+](CCO)(C)C	
-
-1126   S(=O)(=O)(N(C[C@@H](OP(=O)(O)O)[C@@H](NC(=O)O[C@H]1CCOC1)Cc1ccccc1)CC(C)C)c1ccc(N)cc1	1319
-
-1127   P(=O)(OCN1C(=O)C(NC1=O)(c1ccccc1)c1ccccc1)(O)O	1320
-
 1129   Clc1cc2NC(N(S(=O)(=O)c2cc1S(=O)(=O)N)C)CSCC(F)(F)F	1324
 
 1130   Clc1c(S(=O)(=O)N)cc2c(NC(NC2=O)CC)c1	1325
 
-1144   CCC1(C(=O)NC(=O)NC1=O)c1ccccc1.COc1cc2c(ccnc2cc1)C(C1CC2CCN1CC2C=C)O	
-
 1151   O=C1N(C(=O)NC(=O)C1(C1=CCCCC1)C)C	[NO NAME]
-
-1156   Ic1c(N(CC(O)CO)C(=O)C)c(I)c(c(I)c1C(=O)NCC(O)CO)C(=O)NCC(O)CO	1362
 
 1168   [Na+].OC(=O)[O-]	1390
 
 1170   Clc1ccc(C(=O)NCCc2ccc(OC(C)(C)C(=O)O)cc2)cc1	1393
-
-1174   c1ccc(c(c1)C(=O)[O-])O.c1ccc(c(c1)C(=O)[O-])O.[Mg+2]	
 
 1177   C[N+](C)(C)CCO.c1ccc(c(c1)C(=O)[O-])O.c1ccc(c(c1)C(=O)[O-])O.[Mg+2].c1ccc(c(c1)C(=O)[O-])O	[NO NAME]
 
@@ -553,8 +453,6 @@
 1224   ClC(Cl)(Cl)C(O)O	1563
 
 1225   Clc1cc2c(N(C(=O)CN=C2c2c(F)cccc2)C)cc1	1567
-
-1228   CC(=Nc1c(c(c(c(c1I)N(C)C(=O)C)I)C(=N[C@@H](C=O)[C@H]([C@@H]([C@@H](CO)O)O)O)O)I)O	
 
 1233   Ic1cc(C[C@H](N)C(=O)[O-])cc(I)c1Oc1cc(I)c(O)c(I)c1.Ic1cc(C[C@H](N)C(=O)[O-])cc(I)c1Oc1cc(I)c(O)cc1.[Na+].[Na+]	1583
 
@@ -586,8 +484,6 @@
 
 1287   C1C[C@@H](O)C[C@H]2C[C@@H](O)[C@@H]3[C@@H]([C@@]12C)C[C@H](O)[C@]1([C@H]3CC[C@@H]1[C@H](C)CCC(=O)O)C	CHD
 
-1292   Cc1cc2c(cc1C)n(C[C@H](O)[C@H](O)[C@H](O)CO[P@@](=O)(O)O[P@](=O)(O)OC[C@H]1O[C@H]([C@H](O)[C@@H]1O)n1cnc3c1ncnc3N)c1nc(=O)[nH]c(=O)c1n2	
-
 1296   [Fe+3].[Cl-].OC(=O)CCc1/c/2=C/C3=N/C(=C\c4[n-]c(c(c4C)C=C)/C=C/4\N=C(/C=c(\[n-]2)/c1C)C(=C4C)C=C)/C(=C3CCC(=O)O)C	
 
 1298   [C@H]1(CC[C@]2([C@@H](C1)CC[C@H]1[C@@H]3CC[C@H]([C@@H](CCC(=O)O)C)[C@@]3(C)[C@H](C[C@H]21)O)C)O	(3a,5b,12a)-3,12-dihydroxy-Cholan-24-oic acid.mol
@@ -597,10 +493,6 @@
 1300   OC(=O)c1ccccc1	Benzoic acid
 
 1306   CC(C(=O)O)O	Structure #1
-
-1311   S=P(N1CC1)(N1CC1)N1CC1	
-
-1315   Ic1c(NC(=O)CCCCC(=O)Nc2c(I)c(c(I)cc2I)C(=O)O)c(I)cc(I)c1C(=O)O	
 
 1316   O(c1cc(ccc1NS(=O)(=O)C)[N+](=O)[O-])c1ccccc1	[NO NAME]
 
@@ -624,17 +516,11 @@
 
 1357   O[C@@H](CNC1Cc2c(C1)cc(c(c2)CC)CC)c1c2c([nH]c(=O)cc2)c(O)cc1	[NO NAME]
 
-1359   C1(CN(C1)C(=O)c1c(Nc2c(cc(cc2)I)F)c(F)c(F)cc1)(O)[C@@H]1CCCCN1	
-
 1360   [Ag+].S(=O)(=O)([N-]c1ncccn1)c1ccc(N)cc1	
-
-1362   [Ga+3].[O-][N+](=O)[O-].[O-][N+](=O)[O-].[O-][N+](=O)[O-]	
 
 1366   c12c(Nc3c(cc(cc3)Br)F)ncnc1cc(c(c2)OC)OCC1CCN(CC1)C	
 
 1367   [Cl](=O)[O-].[Cl](=O)[O-].[Cl](=O)[O-].[Cl](=O)[O-].O.O=O	
-
-1369   Cc1cn(C2CC(C(COP(=S)(O)OC3CC(n4cc(C)c(nc4=O)O)OC3COP(=S)(O)OC3CC(n4cnc5c4[nH]c(=N)nc5O)OC3COP(=S)(O)OC3CC(n4cnc5c(N)ncnc45)OC3COP(=S)(O)OC3C(COP(=S)(O)OC4C(COP(=S)(O)OC5C(COP(=S)(O)OC6C(COP(=S)(O)OC7C(CO)OC(C7OCCOC)n7cnc8c7[nH]c(=N)nc8O)OC(C6OCCOC)n6cc(C)c(=N)nc6O)OC(C5OCCOC)n5cc(C)c(=N)nc5O)OC(C4OCCOC)n4cc(C)c(nc4=O)O)OC(C3OCCOC)n3cc(C)c(=N)nc3O)O2)OP(=S)(O)OCC2C(CC(n3cc(C)c(nc3=O)O)O2)OP(=S)(O)OCC2C(CC(n3cnc4c3[nH]c(=N)nc4O)O2)OP(=S)(O)OCC2C(CC(n3cc(C)c(=N)nc3O)O2)OP(=S)(O)OCC2C(CC(n3cc(C)c(nc3=O)O)O2)OP(=S)(O)OCC2C(CC(n3cc(C)c(nc3=O)O)O2)OP(=S)(O)OCC2C(CC(n3cc(C)c(=N)nc3O)O2)OP(=S)(O)OCC2C(C(C(n3cnc4c3[nH]c(=N)nc4O)O2)OCCOC)OP(=S)(O)OCC2C(C(C(n3cc(C)c(=N)nc3O)O2)OCCOC)OP(=S)(O)OCC2C(C(C(n3cnc4c(N)ncnc34)O2)OCCOC)OP(=S)(O)OCC2C(C(C(n3cc(C)c(=N)nc3O)O2)OCCOC)OP(=S)(O)OCC2C(C(C(n3cc(C)c(=N)nc3O)O2)OCCOC)O)c(nc1=N)O	
 
 1370   [Na+].[Na+].[Na+].[Sb]12(O[C@H]([C@H]([C@H](O1)[C@H](O)CO)O2)C(=O)[O-])(O[Sb]12(O[C@H]([C@H]([C@H](O1)[C@H](O)CO)O2)C(=O)[O-])[O-])O.O.O.O.O.O.O.O.O.O	
 
@@ -654,8 +540,6 @@
 
 1397   c1cnc(nc1)CNC(=O)c1c(nc(nc1)N1CCC[C@H]1CO)NCc1cc(c(cc1)OC)Cl	
 
-1399   C(P(=O)(O)O)(P(=O)(O)O)NC1CCCCCC1	
-
 1404   Clc1c(onc1C)NS(=O)(=O)c1c(scc1)C(=O)Cc1c(cc2OCOc2c1)C	216235
 
 1406   c1c(ccc(c1)[C@@H](c1ccccc1)N1CCN(CC1)CCOCC(=O)O)Cl	
@@ -670,21 +554,15 @@
 
 1421   O=C(c1c2OCCc2c(N)c(Cl)c1)NC1CCN(CCCOC)CC1	
 
-1423   [C@@H]12N(C(=C(CS1)Sc1scc(n1)c1cc[n+](cc1)C)C(=O)[O-])C(=O)[C@H]2NC(=O)/C(=N\OCC)/c1nsc(n1)NP(=O)(O)O	
-
 1428   c1c(c(c2c(n1)cc(c(c2)OC)OCCCN1CCN(CC1)C)Nc1c(cc(c(c1)OC)Cl)Cl)C#N	
 
 1433   o1c2c(cc(N3CCN(CC3)CCCCc3c4c([nH]c3)ccc(c4)C#N)cc2)cc1C(=O)N	[NO NAME]
-
-1434   C(C/C=C\CCCCCCCC)CCCCCC(=O)O.OCCN	
 
 1439   [C@H]1(CC[C@H]([C@H](O1)O[C@H]1[C@@H]([C@H]([C@@H](C[C@@H]1N)NC(=O)[C@H](CCN)O)O[C@H]1O[C@@H]([C@H]([C@@H]([C@H]1O)N)O)CO)O)N)CN	ChEBI
 
 1442   N1(C(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@H](NC(=O)[C@H](NC(=O)C)Cc2cc3c(cc2)cccc3)Cc2ccc(Cl)cc2)Cc2cnccc2)CO)Cc2ccc(NC(=O)[C@H]3NC(=O)NC(=O)C3)cc2)Cc2ccc(NC(=O)N)cc2)CC(C)C)CCCCNC(C)C)[C@H](C(=O)N[C@@H](C(=O)N)C)CCC1	
 
 1446   N1([C@@H]([C@@H](CO)O)CO)CCN(CCN(CCN(CC1)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-].[Gd+3]	138068-37-8.mol
-
-1447   c1cc(cc(c1)I)CN=C(N)N	
 
 1448   c1ccc(cc1)C1(CCC(CC1)OP(=O)([O-])OCC(CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])N(CC(=O)[O-])CC(=O)[O-])c1ccccc1.[Gd+3].[Na+].[Na+].[Na+]	
 
@@ -693,14 +571,6 @@
 1453   C1C[C@]([C@]2(CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@]34C)[C@H]12)C)(C)O	[NO NAME]
 
 1454   c1ccc2c(c1)cccc2CC1=NCCN1	Structure #1
-
-1458   [K+].[I-]	
-
-1459   P(=O)(OCOc1c(C(C)C)cccc1C(C)C)(O)O	
-
-1460   P(=O)(O)(O)n1[nH]c(nc1=O)CN1[C@H]([C@H](OCC1)O[C@@H](c1cc(cc(c1)C(F)(F)F)C(F)(F)F)C)c1ccc(F)cc1	219090
-
-1462   [Al+3].[OH-].[OH-].[OH-]	
 
 1463   [Ca+2].[O-]C(=O)[O-]	
 
@@ -723,8 +593,6 @@
 1485   c1ccc2c(c1)cc(cc2)C[C@@H](NC(=O)C)C(=O)N[C@@H](C(=O)N[C@H](Cc1cccnc1)C(=O)N[C@H](C(=O)N[C@@H](Cc1ccc(cc1)O)C(=O)N[C@@H](C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](C(=O)N1[C@@H](CCC1)C(=O)N[C@@H](C(=O)N)C)CCCCN=C(NCC)NCC)CCCCN=C(NCC)NCC)CO)Cc1ccc(cc1)Cl	
 
 1486   C1C(=O)C=C2[C@](C1)([C@@]1([C@@H](CC2)[C@H]2[C@@](C[C@@H]1O)(C)[C@]1([C@@H](C2)OC(O1)(C)C)C(=O)CCl)F)C	
-
-1488   CCN=C([C@@H]1CCCN1C(=O)[C@H](CCCNC(=N)N)N=C([C@H](CC(C)C)N=C([C@@H](Cc1cn(Cc2ccccc2)cn1)N=C([C@H](Cc1ccc(cc1)O)N=C([C@H](CO)N=C([C@H](Cc1c[nH]c2ccccc12)N=C([C@H](Cc1cnc[nH]1)N=C([C@@H]1CCC(=N1)O)O)O)O)O)O)O)O)O.CC(=O)O.CC(=O)O	
 
 1491   [La+3].[La+3].[O-]C(=O)[O-].[O-]C(=O)[O-].[O-]C(=O)[O-]	
 
@@ -756,8 +624,6 @@
 
 1537   Oc1c(C(C)(C)C)cc(C(C)(C)C)c(NC(=O)c2c(=O)c3c([nH]c2)cccc3)c1	[NO NAME]
 
-1540   FCCCN1C2CCC1[C@H]([C@H](C2)c1ccc(cc1)I)C(=O)OC	
-
 1543   c1cccc(n1)c1cc(ccc1Cl)NC(=O)c1ccc(cc1Cl)S(=O)(=O)C	
 
 1546   CC(=O)O[C@@H](C[N+](C)(C)C)CC(=O)O	ChEBI
@@ -776,8 +642,6 @@
 
 1572   c1cc(cc2c1nc(c(c2)[C@H]([C@@](CCN(C)C)(c1cccc2c1cccc2)O)c1ccccc1)OC)Br	
 
-1579   c12c(c(=O)n(c(c1c(=O)n(c(=O)n2c1cc(ccc1)NC(=O)C)C1CC1)Nc1ccc(cc1F)I)C)C	
-
 1581   [223Ra](Cl)Cl	
 
 1582   c1nc(c2c(n1)cc(c(c2)NC(=O)/C=C/CN(C)C)O[C@H]1CCOC1)Nc1cc(c(cc1)F)Cl	
@@ -788,19 +652,9 @@
 
 1590   n1(ccnc1)/C(=C\1/S[C@@H](CS1)c1c(cc(cc1)Cl)Cl)/C#N	
 
-1591   CC(OC(=O)[C@@H](N[P@@](=O)(Oc1ccccc1)OCC1O[C@H]([C@]([C@@H]1O)(C)F)n1c(=O)[nH]c(=O)cc1)C)C	
-
 1592   N1(C(c2ccc(cc2)Cl)c2ccccc2)CCN(CC1)C	
 
 1594   c1cc(c(COC(Cn2ccnc2)c2ccc(cc2Cl)Cl)c(c1)Cl)Cl	
-
-1595   CC(C)C(CC(C)N(C)C)(C#N)c1ccccc1.C(C(=O)O)C(CC(=O)O)(C(=O)O)O	
-
-1596   CCC(Cc1c(cc(c(c1I)N)I)I)C(=O)O	
-
-1597   C[C@@H](C(=Nc1c(c(c(c(c1I)C(=NC(CO)CO)O)I)C(=NC(CO)CO)O)I)O)O	
-
-1604   CC(CN1c2ccccc2Sc2ccc(cc12)S(=O)(=O)N(C)C)N(C)C.CS(=O)(=O)O	
 
 1605   CN(Cc1c(cccc1N=C(c1ccccc1)O)Cl)CC(=O)N1CCOCC1	
 
@@ -820,13 +674,9 @@
 
 1637   CN(Cc1cc(cc(c1N)Br)Br)C1CCCCC1	
 
-1644   CCCCCCCCCCCCCCCCOP(=O)([O-])OCC[N+](C)(C)C	
-
 1645   Cc1ccc(c(c1)C(=O)N1CCN(CC[C@H]1C)c1nc2cc(ccc2o1)Cl)n1nccn1	
 
 1646   c1cc(ccc1Cc1cc(ccc1Cl)[C@H]1[C@@H]([C@H]([C@@H]([C@@H](CO)O1)O)O)O)O[C@H]1CCOC1	
-
-1650   Cn1nnc(n1)c1ccc(cn1)c1ccc(cc1F)N1C[C@H](COP(=O)(O)O)OC1=O	
 
 1659   n1c(nc(c(c1)Cl)Nc1c(cccc1)S(=O)(=O)C(C)C)Nc1cc(c(cc1OC(C)C)C1CCNCC1)C	
 
@@ -836,17 +686,11 @@
 
 1674   C(CCCOCCOCc1c(cccc1Cl)Cl)CCNC[C@@H](c1ccc(c(c1)CO)O)O	
 
-1679   [Al+3].[K+].[O-]S(=O)(=O)[O-].[O-]S(=O)(=O)[O-]	
-
 1681   Brc1c(C[N+]2(CCOCCC3C4C(C(C4)CC3)(C)C)CCOCC2)cc(OC)c(OC)c1	
 
 1684   C[C@@]1([C@H]2C[C@H]3[C@@H](C(=C(C(=O)[C@]3(C(=C2C(=O)c2c(ccc(c12)Cl)O)O)O)C(=N)O)O)N(C)C)O	
 
-1685   O1CC2C(C(c3c(C2O)cc2OCOc2c3)c2cc(OC)c(OC)c(OC)c2)C1=O.O1CC2C(C(c3c(C2O)cc2OCOc2c3)c2cc(OC)c(OC)c(OC)c2)C1=O.OC1C(C(C(c2c1cc1OCOc1c2)c1cc(OC)c(OC)c(OC)c1)C(=O)O)CO.OC1C(C(C(c2c1cc1OCOc1c2)c1cc(OC)c(OC)c(OC)c1)C(=O)O)CO	11979494
-
 1690   CC(C)[C@@H](CO)n1cc(c(=O)c2cc(Cc3cccc(c3F)Cl)c(cc12)OC)C(=O)O	
-
-1692   [Mg+2].[OH-].[OH-]	
 
 1693   [Na+].S(=O)(=O)(CCS)[O-]	
 
@@ -854,11 +698,7 @@
 
 1695   C(COP(=O)(OC[C@@H](COC(=O)CCCCCCCCCCCCCCC)OC(=O)CCCCCCCCCCCCCCC)[O-])[N+](C)(C)C	Dipalmitoylphosphatidylcholine.mol
 
-1696   c1(cc(c2c(c1O)nccc2)I)I	
-
 1697   [Ca+2].C(=[N-])=[N-]	
-
-1704   C(CC(=O)[O-])(C(=O)[O-])(CC(=O)[O-])O.[K+].[K+].[K+]	
 
 1705   O=P([O-])(O)[O-].[Na+].[Na+]	
 
@@ -869,12 +709,6 @@
 1709   Cl[Cu]Cl	
 
 1710   [O-]C(=O)CN1CCN(CC(=O)O)CCN(CC(=O)[O-])CCN(CC(=O)[O-])CC1.[Gd+3]	
-
-1711   CC(=O)Nc1c(c(c(c(c1I)C(=O)O)I)C(=O)NC)I	
-
-1712   C(=O)(NCC(CO)O)c1c(c(c(c(c1I)C(=O)NCC(CO)O)I)N(CCO)C(=O)CO)I	
-
-1713   c1(c(c(c(c(c1C(=O)NCCO)I)N(C(=O)C)CC(CO)O)I)C(=O)NCC(CO)O)I	
 
 1714   C1=C/C(=C(\c2ccc(cc2)N(CC)CC)/c2cc(ccc2S(=O)(=O)[O-])S(=O)(=O)[O-])/C=CC1=[N+](CC)CC.[Na+]	
 
@@ -893,8 +727,6 @@
 1731   C(C(=O)[O-])C(CC(=O)[O-])(C(=O)[O-])O.[Na+].[Na+].[Na+]	
 
 1732   [He]	
-
-1733   CN(CC(CO)O)C(=O)c1c(c(c(c(c1I)N=C(COC)O)I)C(=NCC(CO)O)O)I	
 
 1735   [Na+].[Na+].[Na+].[Na+].c1c(cc2c(c1N)c(c(c(c2)S(=O)(=O)[O-])/N=N/c1ccc(cc1C)c1ccc(c(c1)C)/N=N/c1c(c2c(cc1S(=O)(=O)[O-])cc(cc2N)S(=O)(=O)[O-])O)O)S(=O)(=O)[O-]	
 
@@ -920,8 +752,6 @@
 
 1764   C1(=Cc2c(Sc3c1cc(cc3)Cl)cccc2)OCCN(C)C	
 
-1770   P1(=O)(OCC(CO1)(C)C)C1=C(NC(=C(C1c1cc([N+](=O)[O-])ccc1)C(=O)OCCN(c1ccccc1)Cc1ccccc1)C)C	
-
 1772   [C@H]1(C(=C(NC(=C1C(=O)OC)C)COCCN)C(=O)OCC)c1c(cccc1)Cl	
 
 1773   Cc1nc(c(c(n1)OC)NC1=NCCN1)Cl	
@@ -934,17 +764,11 @@
 
 1788   [N+](CCO)(C)(C)[11CH3].[Cl-]	
 
-1791   [Si](O[Si](=O)[O-])(O[Si](=O)[O-])([O-])[O-].[Mg+2].[Mg+2]	
-
 1798   CN1c2ccccc2C(c2ccc(cc2S1(=O)=O)Cl)NCCCCCCC(=O)O	
 
 1802   [131I][Na]	
 
-1806   [P@@](=O)(Oc1ccccc1)(N[C@H](C(=O)OC(C)C)C)CO[C@@H](Cn1c2ncnc(N)c2nc1)C	
-
 1807   [Br-].[C@@H]1(C[C@H]2[C@H]3[C@@H]([C@@H](C1)[N+]2(CCCC)C)O3)OC(=O)[C@H](CO)c1ccccc1	
-
-1809   C(=O)(c1c(c(c(c(c1I)C(=O)NCCO)I)NC(=O)CNC(=O)c1c(c(c(c(c1I)C(=O)NC)I)N(C)C(=O)C)I)I)O	
 
 1810   [Tc](=O)(=O)(=O)[O-].[Na+]	
 
@@ -952,47 +776,23 @@
 
 1812   [Tl+].[Cl-]	
 
-1813   N12[C@@H]([C@@H](C1=O)NC(=O)Cc1ccccc1)SC([C@@H]2C(=O)O)(C)C.C(=O)(c1ccc(N)cc1)OCCN(CC)CC	
-
 1814   [Zn]=O	
 
 1815   [O-]S(=O)(=O)[O-].[Zn+2]	
 
-1816   N12[C@H](C(S[C@@H]2[C@H](NC(=O)Cc2ccccc2)C1=O)(C)C)C(=O)[O-].c1ccccc1CC(=O)N[C@@H]1C(=O)N2[C@H](C(S[C@H]12)(C)C)C(=O)[O-].[NH2+](Cc1ccccc1)CC[NH2+]Cc1ccccc1	
-
 1818   [Na+].[F-]	
-
-1820   Fc1cn(c(=O)[nH]c1=O)C1OCCC1.O=c1[nH]c(=O)cc[nH]1	
 
 1822   P(=O)(Oc1c2c(c(OP(=O)([O-])[O-])cc1C)cccc2)([O-])[O-].[Na+].[Na+].[Na+].[Na+]	
 
-1823   CN(C)C=Nc1c(cc(c(CCC(=O)O)c1I)I)I	
-
 1824   [Hg](O)CC(OC)CNC(=O)c1c(OCC(=O)O)cccc1	
 
-1825   c1(c(c(c(cc1I)I)NC(=O)CCC)I)CC(C(=O)O)CC	
-
 1828   Clc1c(CN2CCCC2=N)[nH]c(=O)[nH]c1=O	
-
-1830   c1(c(c(c(c(c1I)N(C(=O)C)C)I)NC(=O)C)I)C(=O)O	
-
-1831   c1(c(c(c(cc1I)I)NC(=O)C)I)C(=O)O	
 
 1836   CC1(C)C(=[N+](CCCCS(=O)(=O)[O-])c2ccc3ccccc3c12)C=CC=CC=CC=C1C(C)(C)c2c3ccccc3ccc2N1CCCCS(=O)(=O)[O-].[Na+]	
 
 1838   [Na+].[O-]C(=O)C	
 
-1839   [K+].OP(=O)(O)[O-]	
-
-1840   [K+].[K+].O=P([O-])(O)[O-]	
-
-1841   [123I-]	
-
 1844   [Na+].O=S(=O)([O-])[O-].[Na+]	
-
-1845   [111In+3].[O-]c1c2ncccc2ccc1.[O-]c1c2ncccc2ccc1.[O-]c1c2ncccc2ccc1	
-
-1846   C[C@@H](C(=O)N1CCC[C@H]1C(=O)O)N[C@@H](CCc1ccccc1)C(=O)O.O.O	
 
 1848   Cl[111In](Cl)Cl	
 
