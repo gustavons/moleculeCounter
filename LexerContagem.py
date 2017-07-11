@@ -5,20 +5,20 @@
 # Analizador lexico
 # ------------------------------------------------------------
 import ply.lex as lex
-tokens = ('NUMBER','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS', 'ELEMENTODUASLETRAS')
+tokens = ('NUMBER','ELEMENTODUASLETRAS','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS' )
 
 # Tokens
 t_ELEMENTODUASLETRAS = r'(\b(Li)|(Na)|(Rb)|(Cs)|(Fr)|(Be)|(Mg)|(Ca)|(Sr)' \
           r'|(Ba)|(Ka)|(Al)|(Ga)|(In)|(Ti)|(Si)|(Ge)|(Sn)|(Pb)' \
           r'|(As)|(Sb)|(Bi)|(Se)|(Te)|(Po)|(Cl)|(Br)|(At)\b)'
 t_NUMBER = r'\d'
-t_SIMBOLOS = r'[/ \( \) \[ \] \\ @ \+ \-]+'
+t_SIMBOLOS = r'[/ \( \) \\ @ \+ \-]+'
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
 
 # A string containing ignored characters
-t_ignore = '\t\n:+-.'
+t_ignore = '\t\n:+-.@[]'
 
 def t_ELEMENTOMINUS(t):
     r'[hkbcnposfi]+'
@@ -30,7 +30,7 @@ def t_ELEMENTOMINUS(t):
     return t
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
-    r'[HKBCNPOSFI]'
+    r'[HCKBNPOSFI]'
     try:
          t.value = t.value
     except ValueError:
@@ -43,9 +43,12 @@ def t_newline(t):
     r'\n+'
     t.lineno += len(t.value)
 # Error handling rule
-def t_error(t):
-    #print "Illegal character '%s'" % t.value[0]
-    t.skip(1)
+# def t_error(t):
+    # print "Illegal character '%s'" % t.value[0]
+    # t.skip(1)
+
+
 # Build the lexer
 lex.lex(debug=1)
+
 
