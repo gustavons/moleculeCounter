@@ -1,0 +1,1 @@
+1 {'H': 3, 'C': 1, 'Cl': 1} Soma moleculas: 5 Massa Molar: 50.48752

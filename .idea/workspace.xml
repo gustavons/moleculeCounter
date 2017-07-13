@@ -5,6 +5,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexerContagem.py" afterPath="$PROJECT_DIR$/LexerContagem.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContagemPronto.py" afterPath="$PROJECT_DIR$/mainContagemPronto.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" afterPath="$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser.out" afterPath="$PROJECT_DIR$/parser.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsetab.py" afterPath="$PROJECT_DIR$/parsetab.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saida_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt" afterPath="$PROJECT_DIR$/saida_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saida_diferente_de_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt" afterPath="$PROJECT_DIR$/saida_diferente_de_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
     </list>
     <list id="e42ca193-5228-42fa-8afc-c1dace2b0c57" name="update  (cherry picked from commit c31c023)" comment="update&#10;&#10;(cherry picked from commit c31c023)" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -21,11 +26,11 @@
     <SUITE FILE_PATH="coverage/Implementacao$rokie.coverage" NAME="rokie Coverage Results" MODIFIED="1494119673143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$calclex.coverage" NAME="calclex Coverage Results" MODIFIED="1486236417805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$LerArquivo.coverage" NAME="LerArquivo Coverage Results" MODIFIED="1486471679241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Implementacao$mainContagemPronto.coverage" NAME="mainContagemPronto Coverage Results" MODIFIED="1499721949603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Implementacao$mainContagemPronto.coverage" NAME="mainContagemPronto Coverage Results" MODIFIED="1499978160070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$debug.coverage" NAME="debug Coverage Results" MODIFIED="1494119670382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$python.coverage" NAME="python Coverage Results" MODIFIED="1486236068492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Implementacao$main.coverage" NAME="main Coverage Results" MODIFIED="1486236425365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Implementacao$LexerContagem.coverage" NAME="LexerContagem Coverage Results" MODIFIED="1499177888282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Implementacao$LexerContagem.coverage" NAME="LexerContagem Coverage Results" MODIFIED="1499733672696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -48,18 +53,8 @@
       <file leaf-file-name="LexerContagem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LexerContagem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lex.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/lex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="39" column="116" lean-forward="false" selection-start-line="39" selection-start-column="116" selection-end-line="39" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -68,18 +63,18 @@
       <file leaf-file-name="README" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="48">
               <caret line="3" column="85" lean-forward="false" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainContagemPronto.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainContagemPronto.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainContagemPronto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="165" column="23" lean-forward="false" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+            <state relative-caret-position="197">
+              <caret line="186" column="26" lean-forward="true" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
               <folding>
                 <element signature="e#46#69#0" expanded="true" />
               </folding>
@@ -87,21 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yacc.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2100" column="17" lean-forward="false" selection-start-line="2100" selection-start-column="11" selection-end-line="2100" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="71">
+              <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -110,8 +95,18 @@
       <file leaf-file-name="drugb_approved2.smiles" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drugb_approved2.smiles">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="241" lean-forward="false" selection-start-line="3" selection-start-column="232" selection-end-line="3" selection-end-column="241" />
+            <state relative-caret-position="16">
+              <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drugb_approved_databank.smiles" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drugb_approved_databank.smiles">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,10 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find>s</find>
-      <find>expression</find>
-      <find>na</find>
       <find>lexer.</find>
       <find>parser</find>
       <find>term</find>
@@ -158,6 +149,10 @@
       <find>ELEMENTO</find>
       <find>SIM</find>
       <find>method</find>
+      <find>e</find>
+      <find>)</find>
+      <find />
+      <find>\\t</find>
     </findStrings>
     <replaceStrings>
       <replace>(p):     'expression : CE expression'     p[0] = p[1] + p[3]</replace>
@@ -207,8 +202,9 @@
         <option value="$PROJECT_DIR$/rokie.py" />
         <option value="$PROJECT_DIR$/debug.py" />
         <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/mainContagemPronto.py" />
+        <option value="$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
         <option value="$PROJECT_DIR$/LexerContagem.py" />
+        <option value="$PROJECT_DIR$/mainContagemPronto.py" />
       </list>
     </option>
   </component>
@@ -237,6 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -252,7 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -636,14 +632,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3592535" sideWeight="0.5058651" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3592535" sideWeight="0.4941349" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3564516" sideWeight="0.4941349" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31993568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24560118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27010623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503888" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39813375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3967742" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -715,47 +711,47 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>130</line>
+          <line>144</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>151</line>
+          <line>165</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>154</line>
+          <line>168</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>157</line>
+          <line>171</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>112</line>
+          <line>126</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>92</line>
+          <line>106</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>86</line>
+          <line>100</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>84</line>
+          <line>98</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>59</line>
+          <line>73</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -765,7 +761,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mainContagemPronto.py</url>
-          <line>88</line>
+          <line>102</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -775,8 +771,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LexerContagem.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="96" />
+          <line>64</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -786,7 +782,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="97" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -842,13 +838,6 @@
     <entry file="file://$PROJECT_DIR$/saida_diferente_de_20_moleculas_ARQUIVO:drugb_approved2.smiles" />
     <entry file="file://$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO:drugb_approved2.smiles" />
     <entry file="file://$PROJECT_DIR$/saida_20_moleculas_ARQUIVO:drugb_approved2.smiles" />
-    <entry file="file://$PROJECT_DIR$/drugb_approved_databank.smiles">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saida_20_moleculas_ARQUIVO:drugb_approved_databank.smiles" />
     <entry file="file://$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO:drugb_approved_databank.smiles" />
     <entry file="file://$PROJECT_DIR$/saida_diferente_de_20_moleculas_ARQUIVO:drugb_approved_databank.smiles" />
@@ -865,36 +854,6 @@
     <entry file="file://$PROJECT_DIR$/saida_15_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
     <entry file="file://$PROJECT_DIR$/saida_diferente_de_1_moleculas_ARQUIVO_drugb_approved2.smiles.txt" />
     <entry file="file://$PROJECT_DIR$/rokie.py" />
-    <entry file="file://$PROJECT_DIR$/saida_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saida_diferente_de_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drugb_approved2.smiles">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="241" lean-forward="false" selection-start-line="3" selection-start-column="232" selection-end-line="3" selection-end-column="241" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser.out">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -909,45 +868,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/lex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2100" column="17" lean-forward="false" selection-start-line="2100" selection-start-column="11" selection-end-line="2100" selection-end-column="17" />
+        <state relative-caret-position="16656">
+          <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugb_approved_databank.smiles">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/lex.py">
+    <entry file="file://$PROJECT_DIR$/saida_diferente_de_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="1046" column="0" lean-forward="false" selection-start-line="1046" selection-start-column="0" selection-end-line="1046" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saida_10_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drugb_approved2.smiles">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="48">
           <caret line="3" column="85" lean-forward="false" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/ply/yacc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="1198" column="0" lean-forward="false" selection-start-line="1198" selection-start-column="0" selection-end-line="1198" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LexerContagem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="191">
+          <caret line="39" column="116" lean-forward="false" selection-start-line="39" selection-start-column="116" selection-end-line="39" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainContagemPronto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="165" column="23" lean-forward="false" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+        <state relative-caret-position="197">
+          <caret line="186" column="26" lean-forward="true" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
           <folding>
             <element signature="e#46#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nao_contado_moleculas_ARQUIVO_drugb_approved2.smiles.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

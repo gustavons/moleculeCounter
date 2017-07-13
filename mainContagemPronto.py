@@ -17,45 +17,59 @@ def analise(file, quantidade_moleculas):
     nao_contado = open(sem_contar_nome_arquivo, 'w')
 
     precedence = (
-        ('left', 'ELEMENTODUASLETRAS'),
+        ('left', 'ELEMENTO'),
         ('left', 'ELEMENTOMINUS', 'ELEMENTO')
 
     )
 
     # Definir o valor de cada elemento que tem seu smimbolo com duas letras
-    def p_elemento_com_duas_letras(p):
-        'term : ELEMENTODUASLETRAS'
-
-        try:
-            dic_elementos[p[1]] = dic_elementos[p[1]] + 1
-        except:
-            dic_elementos[p[1]] = 1
-
-        try:
-            dic_elementos['H'] = dic_elementos['H'] - 1
-
-
-        except:
-            dic_elementos['H'] = dic_valorelementos[p[1]]
+    # def p_elemento_com_duas_letras(p):
+    #     'term : ELEMENTODUASLETRAS'
+    #
+    #     try:
+    #         dic_elementos[p[1]] = dic_elementos[p[1]] + 1
+    #     except:
+    #         dic_elementos[p[1]] = 1
+    #
+    #     try:
+    #         dic_elementos['H'] = dic_elementos['H'] - 1
+    #
+    #
+    #     except:
+    #         dic_elementos['H'] = dic_valorelementos[p[1]]
 
     # definir o valor de cada elemento
     def p_expression_nada(p):
         'term : ELEMENTO'
-        for i in range(0, len(p[1])):
 
-            letter = p[1][i].upper()
+        if (p[1] not in lista_elementosDuas):
+            for i in range(0, len(p[1])):
+
+                letter = p[1][i].upper()
+                try:
+                    if (letter != 'H'):
+                        dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+
+                except:
+                    dic_elementos['H'] = dic_valorelementos[letter]
+
+                try:
+                    dic_elementos[letter] = dic_elementos[letter] + 1
+                except:
+                    dic_elementos[letter] = 1
+        else:
+
             try:
-                if (letter != 'H'):
-                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+                dic_elementos[p[1]] = dic_elementos[p[1]] + 1
+            except:
+                dic_elementos[p[1]] = 1
+
+            try:
+                dic_elementos['H'] = dic_elementos['H'] - 1
+
 
             except:
-                dic_elementos['H'] = dic_valorelementos[letter]
-
-            try:
-                dic_elementos[letter] = dic_elementos[letter] + 1
-            except:
-                dic_elementos[letter] = 1
-
+                dic_elementos['H'] = dic_valorelementos[p[1]]
     # Definir o valor de cada elemento de uma cadeia ciclica
     def p_expression_menos(p):
         'term : ELEMENTOMINUS'
@@ -81,83 +95,83 @@ def analise(file, quantidade_moleculas):
 
 
 
-    # # As tres funções abaixo são para trabalhar com simbolos
-    # def p_expression_simbolos(p):
-    #     'term :  term SIMBOLOS'
-    # def p_expression_simbolos_junto(p):
-    #     'term :  term SIMBOLOS term'
-    # def p_simbolos_juntos(p):
-    #     'term : SIMBOLOS term'
-    #
-    #
-    # def p_expression_igual (p):
-    #     'term :  term IGUAL term'
-    #     try:
-    #         dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
-    #     except IndexError:
-    #         dic_elementos[p[3][0].upper()] = 1
-    #
-    #     except TypeError:
-    #         pass
-    #
-    #     try:
-    #         dic_elementos['H'] = dic_elementos['H'] - 2
-    #
-    #
-    #     except IndexError:
-    #         dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
-    #     except TypeError:
-    #         pass
-    #
-    #
-    # def p_term_hashtag (p):
-    #         'term : term HASHTAG term'
-    #         try:
-    #             dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
-    #         except IndexError:
-    #             dic_elementos[p[3][0].upper()] = 1
-    #
-    #         except TypeError:
-    #             pass
-    #
-    #         try:
-    #             dic_elementos['H'] = dic_elementos['H'] - 4
-    #
-    #
-    #         except IndexError:
-    #             dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
-    #         except TypeError:
-    #             pass
-    # def p_term_sifrao(p):
-    #     'term :  term SIFRAO term'
-    #     try:
-    #         dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
-    #     except IndexError:
-    #         dic_elementos[p[3][0].upper()] = 1
-    #
-    #     except TypeError:
-    #         pass
-    #
-    #     try:
-    #         dic_elementos['H'] = dic_elementos['H'] - 6
-    #     except IndexError:
-    #         dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
-    #     except TypeError:
-    #         pass
-    #
-    #
-    #
-    #
-    #
-    # def p_error(p):
-    #     print "Syntax error in input!"
-    #
-    # def p_ciclo(p):
-    #     'term : term term'
-    #
-    # def p_aromatica(p):
-    #     'term : term NUMBER'
-    #     dic_elementos['H'] = dic_elementos['H'] - 1
+    # As tres funções abaixo são para trabalhar com simbolos
+    def p_expression_simbolos(p):
+        'term :  term SIMBOLOS'
+    def p_expression_simbolos_junto(p):
+        'term :  term SIMBOLOS term'
+    def p_simbolos_juntos(p):
+        'term : SIMBOLOS term'
+
+
+    def p_expression_igual (p):
+        'term :  term IGUAL term'
+        try:
+            dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
+        except IndexError:
+            dic_elementos[p[3][0].upper()] = 1
+
+        except TypeError:
+            pass
+
+        try:
+            dic_elementos['H'] = dic_elementos['H'] - 2
+
+
+        except IndexError:
+            dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
+        except TypeError:
+            pass
+
+
+    def p_term_hashtag (p):
+            'term : term HASHTAG term'
+            try:
+                dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
+            except IndexError:
+                dic_elementos[p[3][0].upper()] = 1
+
+            except TypeError:
+                pass
+
+            try:
+                dic_elementos['H'] = dic_elementos['H'] - 4
+
+
+            except IndexError:
+                dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
+            except TypeError:
+                pass
+    def p_term_sifrao(p):
+        'term :  term SIFRAO term'
+        try:
+            dic_elementos[p[3][0].upper()] = dic_elementos[p[3][0].upper()] + 1
+        except IndexError:
+            dic_elementos[p[3][0].upper()] = 1
+
+        except TypeError:
+            pass
+
+        try:
+            dic_elementos['H'] = dic_elementos['H'] - 6
+        except IndexError:
+            dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
+        except TypeError:
+            pass
+
+
+
+
+
+    def p_error(p):
+        print "Syntax error in input!"
+
+    def p_ciclo(p):
+        'term : term term'
+
+    def p_aromatica(p):
+        'term : term NUMBER'
+        dic_elementos['H'] = dic_elementos['H'] - 1
 
 
     # Build the parser
@@ -168,8 +182,8 @@ def analise(file, quantidade_moleculas):
     codigo_linha = 0
 
     # função para realizar o processamento
-    # for linha in open(file,'r'):
-    for linha in ['Cl']:
+    for linha in open(file,'r'):
+    # for linha in ['C(C(C=CCl)(C#C)O)C']:
         dic_elementos = {}
         dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
                               'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
@@ -178,32 +192,36 @@ def analise(file, quantidade_moleculas):
                               'O' : 2, 'S' : 2, 'Se' : 2, 'Te' : 2, 'Po' : 2,
                               'F' : 1, 'Cl' : 1, 'Br' : 1, 'I' : 1, 'At' : 1
                               }
+        lista_elementosDuas = ['Mg', 'Br', 'In', 'Ka', 'Li', 'Pb', 'Si', 'As', 'Sn', 'Rb', 'Ti', 'Sb',
+                             'Po', 'Sr', 'Be', 'Fr', 'Te', 'Ba', 'Cl',
+                             'Ca', 'Al', 'Ge', 'Se', 'Ga', 'Na', 'Cs', 'Bi', 'At']
         moleculas += 1
         codigo_linha +=1
-        # try:
-        yacc.parse(linha)
-        print 'Processamento: '+ linha, dic_elementos
+        try:
+            yacc.parse(linha)
+            print 'Processamento: '+ linha, dic_elementos
 
-        if (quantidade_moleculas == somar_lista(dic_elementos.values())):
 
-            ## Abre arquivo de saida e insere o valor no arquivo de saida de sucesso
-            sucesso = open(nome_arquivo_sucesso, 'a+')
-            sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
-                               +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
-            sucesso.close()
+            if (quantidade_moleculas == somar_lista(dic_elementos.values())):
 
-        else:
+                ## Abre arquivo de saida e insere o valor no arquivo de saida de sucesso
+                sucesso = open(nome_arquivo_sucesso, 'a+')
+                sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                   +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
+                sucesso.close()
+
+            else:
+                ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
+                insucesso = open(sem_sucesso_nome_arquivo, 'a+')
+                insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                     +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
+                insucesso.close()
+        except:
             ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
-            insucesso = open(sem_sucesso_nome_arquivo, 'a+')
-            insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
-                                 +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
-            insucesso.close()
-        # except:
-        #     ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
-        #     nao_contado = open(sem_contar_nome_arquivo, 'a+')
-        #     nao_contado.writelines(str(codigo_linha) + '   ' + linha +'\n')
-        #     nao_contado.close()
-        #     continue
+            nao_contado = open(sem_contar_nome_arquivo, 'a+')
+            nao_contado.writelines(str(codigo_linha) + '   ' + linha +'\n')
+            nao_contado.close()
+            continue
 
     # Inprimir na tela numero de moleculas
     print 'Moleculas: '+ str(moleculas)

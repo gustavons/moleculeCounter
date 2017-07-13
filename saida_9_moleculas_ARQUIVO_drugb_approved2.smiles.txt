@@ -1,0 +1,7 @@
+403 {'H': 5, 'C': 1, 'N': 3} Soma moleculas: 9 Massa Molar: 59.07062
+626 {'H': 2, 'S': 1, 'C': 4, 'N': 2} Soma moleculas: 9 Massa Molar: 110.13816
+755 {'H': 6, 'C': 2, 'O': 1} Soma moleculas: 9 Massa Molar: 46.06844
+858 {'H': 4, 'C': 1, 'O': 2, 'N': 2} Soma moleculas: 9 Massa Molar: 76.05474
+948 {'H': 0, 'C': 4, 'N': 3, 'O': 1, 'F': 1} Soma moleculas: 9 Massa Molar: 125.06082
+1693 {'Na': 1, 'S': 2, 'C': 2, 'O': 3, 'H': 1} Soma moleculas: 9 Massa Molar: 160.14931
+1832 {'H': 4, 'C': 3, 'O': 2} Soma moleculas: 9 Massa Molar: 72.06266
