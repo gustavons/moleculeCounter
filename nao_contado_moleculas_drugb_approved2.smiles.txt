@@ -1,53 +1,70 @@
 113   C1CN23CCN45CC(=[O][Gd+3]6734([O-]C(=O)C2)(N1(CC(=O)[O-]6)CC(=[O]7)NC)[O-]C(=O)C5)NC	
+
 211   N#C[Fe-2](C#N)(C#N)(C#N)(C#N)N=O	
-385   Cl[Pt](Cl)(N)N	
-395   C1CCC[C@@H]2[C@@H]1N[Pt]1(N2)OC(=O)C(=O)O1	
+
 401   [Hg](Cl)CC(OC)CNC(=O)N	534
+
 405   [Gd+3].[O-]C(=O)CN(CCN(CC(=O)NCCOC)CC(=O)[O-])CCN(CC(=O)NCCOC)CC(=O)[O-]	538
+
 462   [Gd+3].OC(CN1CCN(CCN(CCN(CC1)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])C	60714
+
 502   O([C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO[C@@]1(O[C@@H]([C@@H](O)[C@@H]1O)CO)CO)C[C@@]1(OC[C@@]2(OC[C@@]3(OC[C@@]4(OC[C@@]5(OC[C@@]6(OC[C@@]7(OC[C@@]8(OC[C@@]9(OC[C@@]%10(OC[C@@]%11(OC[C@@]%12(OC[C@@]%13(OC[C@]%14(O[C@@H]([C@@H](O)[C@@H]%14O)CO)OC[C@]%14(O[C@@H]([C@@H](O)[C@@H]%14O)CO)OC[C@]%14(O[C@@H]([C@@H](O)[C@@H]%14O)CO)OC[C@]%14(O[C@@H]([C@@H](O)[C@@H]%14O)CO)OC[C@]%14(O[C@@H]([C@@H](O)[C@@H]%14O)CO)O[C@H]%14O[C@@H]([C@@H](O)[C@H](O)[C@H]%14O)CO)O[C@@H]([C@@H](O)[C@@H]%13O)CO)O[C@@H]([C@@H](O)[C@@H]%12O)CO)O[C@@H]([C@@H](O)[C@@H]%11O)CO)O[C@@H]([C@@H](O)[C@@H]%10O)CO)O[C@@H]([C@@H](O)[C@@H]9O)CO)O[C@@H]([C@@H](O)[C@@H]8O)CO)O[C@@H]([C@@H](O)[C@@H]7O)CO)O[C@@H]([C@@H](O)[C@@H]6O)CO)O[C@@H]([C@@H](O)[C@@H]5O)CO)O[C@@H]([C@@H](O)[C@@H]4O)CO)O[C@@H]([C@@H](O)[C@@H]3O)CO)O[C@@H]([C@@H](O)[C@@H]2O)CO)O[C@@H]([C@@H](O)[C@@H]1O)CO	638
+
 606   c1ccc(cc1)COCC(C(=O)O)N(CCN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])CC(=O)O.[Gd+3]	
+
 650   [Gd+3].O[C@@H]([C@H](O)[C@H](O)CO)[C@@H](O)CNC.O[C@@H]([C@H](O)[C@H](O)CO)[C@@H](O)CNC.[O-]C(=O)CN(CCN(CC(=O)O)CC(=O)[O-])CCN(CC(=O)O)CC(=O)[O-]	789
-812   C1CCC21C(=O)O[Pt]OC2=O.N.N	
-848   [C@H]1([C@H]([C@@H](O[C@@H]([C@H]1OC(=O)C)COC(=O)C)S[Au]=P(CC)(CC)CC)OC(=O)C)OC(=O)C	
+
 1240   [Fe]	1592
+
 1241   [Zn]	1593
+
 1296   [Fe+3].[Cl-].OC(=O)CCc1/c/2=C/C3=N/C(=C\c4[n-]c(c(c4C)C=C)/C=C/4\N=C(/C=c(\[n-]2)/c1C)C(=C4C)C=C)/C(=C3CCC(=O)O)C	
+
 1360   [Ag+].S(=O)(=O)([N-]c1ncccn1)c1ccc(N)cc1	
+
 1446   N1([C@@H]([C@@H](CO)O)CO)CCN(CCN(CCN(CC1)CC(=O)[O-])CC(=O)[O-])CC(=O)[O-].[Gd+3]	138068-37-8.mol
-1448   c1ccc(cc1)C1(CCC(CC1)OP(=O)([O-])OCC(CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])N(CC(=O)[O-])CC(=O)[O-])c1ccccc1.[Gd+3].[Na+].[Na+].[Na+]	
+
 1471   [Mn+2]	
+
 1484   [Fe+3].[Fe+3].[Fe+3].[Fe+3].N#C[Fe-4](C#N)(C#N)(C#N)(C#N)C#N.N#C[Fe-4](C#N)(C#N)(C#N)(C#N)C#N.N#C[Fe-4](C#N)(C#N)(C#N)(C#N)C#N	
+
 1491   [La+3].[La+3].[O-]C(=O)[O-].[O-]C(=O)[O-].[O-]C(=O)[O-]	
-1495   Cc1c(c(cc(COP(=O)(O)O)n1)CN(CCN(Cc1cc(COP(=O)(O)O)nc(C)c1O)CC(=O)[O-])CC(=O)[O-])O.[Mn+2]	
+
 1562   CCOc1ccc(cc1)C[C@@H](CN(CCN(CC(=O)[O-])CC(=O)[O-])CC(=O)[O-])N(CC(=O)O)CC(=O)O.[Gd+3]	
+
 1581   [223Ra](Cl)Cl	
+
 1707   [Cl-].[Cl-].[Cl-].[Cr+3]	
+
 1708   [Cu+2]	
+
 1709   Cl[Cu]Cl	
+
 1710   [O-]C(=O)CN1CCN(CC(=O)O)CCN(CC(=O)[O-])CCN(CC(=O)[O-])CC1.[Gd+3]	
+
 1715   [99Tc].Brc1c(c(NC(=O)CN(CC(=O)O)CC(=O)O)c(cc1C)C)C	
-1716   C(P(=O)([O-])[O-])P(=O)([O-])[O-].O.O.[98Tc+4]	
-1717   C(O)(P(=O)(O)O)P(=O)(O)O.[99Tc]	
+
 1723   [Fe+3].[Fe+3].[Fe+3].[Fe+3].[Fe+3].[Na+].[Na+].O1[C@@](O[C@H]2O[C@@H]([C@@H](O)[C@H](O)[C@H]2O)CO)([C@@H](O)[C@H](O)[C@H]1CO)CO.O.O.O.[OH-].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2].[O-2]	
+
 1724   [Fe+3].[Fe+3].O=P([O-])([O-])OP(=O)([O-])[O-].O=P([O-])([O-])OP(=O)([O-])[O-].O=P([O-])([O-])OP(=O)([O-])[O-].[Fe+3].[Fe+3]	
-1726   [18F]CCOCCOCCOc1ncc(/C=C/c2ccc(NC)cc2)cc1	
+
 1732   [He]	
-1737   CCOCCP(CCOCC)CCP(CCOCC)CCOCC.CCOCCP(CCOCC)CCP(CCOCC)CCOCC.O.O.[98Tc]	
+
 1738   CC(C)(C[N+]#[C-])OC.CC(C)(C[N+]#[C-])OC.CC(C)(C[N+]#[C-])OC.CC(C)(C[N+]#[C-])OC.CC(C)(C[N+]#[C-])OC.CC(C)(C[N+]#[C-])OC.[Tc+]	
+
 1739   OC(CC(=O)[O-])(CC(=O)[O-])C(=O)[O-].[Fe+3]	
+
 1761   C(CN)C(=O)[N-][C@@H](Cc1cnc[nH]1)C(=O)[O-].[Zn+2]	
-1787   C(=O)(CC(C(=O)[O-])S[Au])O.[Na+]	
-1802   [131I][Na]	
+
 1810   [Tc](=O)(=O)(=O)[O-].[Na+]	
+
 1811   [133Xe]	
+
 1812   [Tl+].[Cl-]	
+
 1814   [Zn]=O	
-1815   [O-]S(=O)(=O)[O-].[Zn+2]	
-1819   [13NH3]	
+
 1824   [Hg](O)CC(OC)CNC(=O)c1c(OCC(=O)O)cccc1	
-1841   [123I-]	
-1845   [111In+3].[O-]c1c2ncccc2ccc1.[O-]c1c2ncccc2ccc1.[O-]c1c2ncccc2ccc1	
-1850   [13C](=N)(N)O	
-1851   [14C](=O)(N)N	
+
 1869   CC[Hg]Sc1ccccc1C(=O)O[Na]	
+

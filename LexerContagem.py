@@ -8,20 +8,22 @@ import ply.lex as lex
 
 # class MyLexer(object):
 
-tokens = ('NUMBER','ELEMENTODUASLETRAS','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'SIMBOLOS' )
+tokens = ('NUMBER','VARIAVEL','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'LSIMBOLOS', 'RSIMBOLOS' )
 
 # Tokens
 # t_ELEMENTODUASLETRAS = r'(\b(Li)|(Na)|(Rb)|(Cs)|(Fr)|(Be)|(Mg)|(Ca)|(Sr)' \
 #           r'|(Ba)|(Ka)|(Al)|(Ga)|(In)|(Ti)|(Si)|(Ge)|(Sn)|(Pb)' \
 #           r'|(As)|(Sb)|(Bi)|(Se)|(Te)|(Po)|(Cl)|(Br)|(At)\b)'
 t_NUMBER = r'\d'
-t_SIMBOLOS = r'[/\(\)\\@\+\-]+'
+t_LSIMBOLOS = r'[\(\[]{1}'
+t_RSIMBOLOS = r'[\)\]]{1}'
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
+t_VARIAVEL = r'P|S'
 
 # A string containing ignored characters
-t_ignore = '\n:+-.@[]hH'
+t_ignore = '\n:+-.@\/hH'
 t_ignore_COMMENT = r'\t.*'
 # t_ignore_COMMENT = r'\t.*'
 
@@ -37,7 +39,7 @@ def t_ELEMENTOMINUS(t):
 
 # A regular expression rule with some action code
 def t_ELEMENTO(t):
-    r'\bLi|Na|Rb|Cs|Fr|Be|Mg|Ca|Sr|Ba|Ka|Al|Ga|In|Ti|Si|Ge|Sn|Pb|As|Sb|Bi|Se|Te|Po|Cl|Br|At\b|[\bC|K|B|N|P|O|S|F|I\b]{1}'
+    r'\bLi|Na|Rb|Cs|Fr|Be|Mg|Ca|Sr|Ba|Ka|Al|Ga|In|Ti|Si|Ge|Sn|Pb|As|Sb|Bi|Se|Te|Po|Cl|Br|At\b|[\bC|K|B|N|O|F|I\b]{1}'
     try:
          t.value = t.value
     except ValueError:

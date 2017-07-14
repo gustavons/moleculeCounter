@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import ply.yacc as yacc
+import copy as copia
 
 from LexerContagem import tokens
 import LexerContagem as lexer
 def analise(file, quantidade_moleculas):
+
+    sentinela = False
+    sentinela_simbolo = 0
 
     # Nome dos arquivos criados
     nome_arquivo_sucesso = 'saida_' + str(quantidade_moleculas) + '_moleculas_ARQUIVO_' + str(file) + '.txt'
@@ -23,8 +27,88 @@ def analise(file, quantidade_moleculas):
     )
 
     # Definir o valor de cada elemento que tem seu smimbolo com duas letras
-    # def p_elemento_com_duas_letras(p):
-    #     'term : ELEMENTODUASLETRAS'
+    def p_variavel(p):
+        'term : VARIAVEL'
+        letter = p[1].upper()
+        l_simbol = ''
+        r_simbol = ''
+        try:
+            ate = 0
+
+            tolkien = p.lexer.clone()
+            while(ate<1):
+                token_ver = tolkien.next().value
+                if (token_ver == ('('or'[')):
+                    l_simbol += '('
+                if (token_ver == (')'or']')):
+                    r_simbol += ')'
+
+
+        except:
+            if (len(r_simbol) > dic_valorelementos[letter]):
+                dic_valorelementos[letter] = dic_valorelementos_variaveis[letter]
+
+        try:
+            if (letter != 'H'):
+                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+
+        except:
+            dic_elementos['H'] = dic_valorelementos[letter]
+
+        try:
+            dic_elementos[letter] = dic_elementos[letter] + 1
+        except:
+            dic_elementos[letter] = 1
+        else:
+
+            try:
+                dic_elementos[p[1]] = dic_elementos[p[1]] + 1
+            except:
+                dic_elementos[p[1]] = 1
+
+            try:
+                dic_elementos['H'] = dic_elementos['H'] - 1
+
+
+            except:
+                dic_elementos['H'] = dic_valorelementos[p[1]]
+
+
+
+    # def p_expression_nada_simbol(p):
+    #     'term : LSIMBOLOS ELEMENTO RSIMBOLOS'
+    #
+    #     if (p[2] not in lista_elementosDuas):
+    #         for i in range(0, len(p[1])):
+    #
+    #             letter = p[2][i].upper()
+    #             try:
+    #                 if (letter != 'H'):
+    #                     dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+    #
+    #             except:
+    #                 dic_elementos['H'] = dic_valorelementos[letter]
+    #
+    #             try:
+    #                 dic_elementos[letter] = dic_elementos[letter] + 1
+    #             except:
+    #                 dic_elementos[letter] = 1
+    #     else:
+    #
+    #         try:
+    #             dic_elementos[p[2]] = dic_elementos[p[1]] + 1
+    #         except:
+    #             dic_elementos[p[2]] = 1
+    #
+    #         try:
+    #             dic_elementos['H'] = dic_elementos['H'] - 1
+    #
+    #
+    #         except:
+    #             dic_elementos['H'] = dic_valorelementos[p[2]]
+    #     sentinela_simbolo =+ 1
+
+
     #
     #     try:
     #         dic_elementos[p[1]] = dic_elementos[p[1]] + 1
@@ -97,12 +181,9 @@ def analise(file, quantidade_moleculas):
 
     # As tres funções abaixo são para trabalhar com simbolos
     def p_expression_simbolos(p):
-        'term :  term SIMBOLOS'
+        'term :  LSIMBOLOS'
     def p_expression_simbolos_junto(p):
-        'term :  term SIMBOLOS term'
-    def p_simbolos_juntos(p):
-        'term : SIMBOLOS term'
-
+        'term :  RSIMBOLOS'
 
     def p_expression_igual (p):
         'term :  term IGUAL term'
@@ -183,7 +264,7 @@ def analise(file, quantidade_moleculas):
 
     # função para realizar o processamento
     for linha in open(file,'r'):
-    # for linha in ['C(C(C=CCl)(C#C)O)C']:
+    # for linha in ['[14C](=O)(N)N']:
         dic_elementos = {}
         dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
                               'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
@@ -192,6 +273,7 @@ def analise(file, quantidade_moleculas):
                               'O' : 2, 'S' : 2, 'Se' : 2, 'Te' : 2, 'Po' : 2,
                               'F' : 1, 'Cl' : 1, 'Br' : 1, 'I' : 1, 'At' : 1
                               }
+        dic_valorelementos_variaveis = {'P' : 5, 'S' : 6}
         lista_elementosDuas = ['Mg', 'Br', 'In', 'Ka', 'Li', 'Pb', 'Si', 'As', 'Sn', 'Rb', 'Ti', 'Sb',
                              'Po', 'Sr', 'Be', 'Fr', 'Te', 'Ba', 'Cl',
                              'Ca', 'Al', 'Ge', 'Se', 'Ga', 'Na', 'Cs', 'Bi', 'At']
@@ -219,7 +301,7 @@ def analise(file, quantidade_moleculas):
         except:
             ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
             nao_contado = open(sem_contar_nome_arquivo, 'a+')
-            nao_contado.writelines(str(codigo_linha) + '   ' + linha +'\n')
+            nao_contado.writelines(str(codigo_linha) + '   ' + linha)
             nao_contado.close()
             continue
 
