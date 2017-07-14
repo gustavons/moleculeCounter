@@ -5,7 +5,7 @@ _tabversion = '3.10'
 
 _lr_method = 'SLR'
 
-_lr_signature = 'leftELEMENTOleftELEMENTOMINUSELEMENTONUMBER VARIAVEL ELEMENTO ELEMENTOMINUS IGUAL SIFRAO HASHTAG LSIMBOLOS RSIMBOLOSterm : VARIAVELterm : ELEMENTOterm : ELEMENTOMINUSterm :  LSIMBOLOSterm :  RSIMBOLOSterm :  term IGUAL termterm : term HASHTAG termterm :  term SIFRAO termterm : term termterm : term NUMBER'
+_lr_signature = 'NUMBER VARIAVEL ELEMENTO ELEMENTOMINUS IGUAL SIFRAO HASHTAG LSIMBOLOS RSIMBOLOSterm : VARIAVELterm : ELEMENTOterm : ELEMENTOMINUSterm :  LSIMBOLOSterm :  RSIMBOLOSterm :  term IGUAL termterm : term HASHTAG termterm :  term SIFRAO termterm : term termterm : term NUMBER'
     
 _lr_action_items = {'VARIAVEL':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,],[2,2,-1,-4,-3,-5,-2,-10,2,2,2,2,2,2,2,]),'HASHTAG':([1,2,3,4,5,6,7,9,12,13,14,],[10,-1,-4,-3,-5,-2,-10,10,10,10,10,]),'NUMBER':([1,2,3,4,5,6,7,9,12,13,14,],[7,-1,-4,-3,-5,-2,-10,7,7,7,7,]),'IGUAL':([1,2,3,4,5,6,7,9,12,13,14,],[8,-1,-4,-3,-5,-2,-10,8,8,8,8,]),'LSIMBOLOS':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,],[3,3,-1,-4,-3,-5,-2,-10,3,3,3,3,3,3,3,]),'ELEMENTOMINUS':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,],[4,4,-1,-4,-3,-5,-2,-10,4,4,4,4,4,4,4,]),'RSIMBOLOS':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,],[5,5,-1,-4,-3,-5,-2,-10,5,5,5,5,5,5,5,]),'SIFRAO':([1,2,3,4,5,6,7,9,12,13,14,],[11,-1,-4,-3,-5,-2,-10,11,11,11,11,]),'$end':([1,2,3,4,5,6,7,9,12,13,14,],[0,-1,-4,-3,-5,-2,-10,-9,-6,-7,-8,]),'ELEMENTO':([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,],[6,6,-1,-4,-3,-5,-2,-10,6,6,6,6,6,6,6,]),}
 
@@ -26,14 +26,14 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> term","S'",1,None,None,None),
-  ('term -> VARIAVEL','term',1,'p_variavel','mainContagemPronto.py',31),
-  ('term -> ELEMENTO','term',1,'p_expression_nada','mainContagemPronto.py',126),
-  ('term -> ELEMENTOMINUS','term',1,'p_expression_menos','mainContagemPronto.py',158),
-  ('term -> LSIMBOLOS','term',1,'p_expression_simbolos','mainContagemPronto.py',183),
-  ('term -> RSIMBOLOS','term',1,'p_expression_simbolos_junto','mainContagemPronto.py',185),
-  ('term -> term IGUAL term','term',3,'p_expression_igual','mainContagemPronto.py',191),
-  ('term -> term HASHTAG term','term',3,'p_term_hashtag','mainContagemPronto.py',211),
-  ('term -> term SIFRAO term','term',3,'p_term_sifrao','mainContagemPronto.py',229),
-  ('term -> term term','term',2,'p_ciclo','mainContagemPronto.py',253),
-  ('term -> term NUMBER','term',2,'p_aromatica','mainContagemPronto.py',256),
+  ('term -> VARIAVEL','term',1,'p_variavel','mainContagemPronto.py',25),
+  ('term -> ELEMENTO','term',1,'p_expression_nada','mainContagemPronto.py',72),
+  ('term -> ELEMENTOMINUS','term',1,'p_expression_menos','mainContagemPronto.py',104),
+  ('term -> LSIMBOLOS','term',1,'p_expression_simbolos','mainContagemPronto.py',129),
+  ('term -> RSIMBOLOS','term',1,'p_expression_simbolos_junto','mainContagemPronto.py',131),
+  ('term -> term IGUAL term','term',3,'p_expression_igual','mainContagemPronto.py',134),
+  ('term -> term HASHTAG term','term',3,'p_term_hashtag','mainContagemPronto.py',154),
+  ('term -> term SIFRAO term','term',3,'p_term_sifrao','mainContagemPronto.py',172),
+  ('term -> term term','term',2,'p_ciclo','mainContagemPronto.py',196),
+  ('term -> term NUMBER','term',2,'p_aromatica','mainContagemPronto.py',199),
 ]

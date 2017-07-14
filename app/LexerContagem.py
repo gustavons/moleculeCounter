@@ -20,7 +20,7 @@ t_RSIMBOLOS = r'[\)\]]{1}'
 t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
-t_VARIAVEL = r'P|S'
+t_VARIAVEL = r'P|S|s|p'
 
 # A string containing ignored characters
 t_ignore = '\n:+-.@\/hH'
@@ -28,7 +28,7 @@ t_ignore_COMMENT = r'\t.*'
 # t_ignore_COMMENT = r'\t.*'
 
 def t_ELEMENTOMINUS(t):
-    r'[kbcnposfi]+'
+    r'\bli|na|rb|cs|fr|be|mg|ca|sr|ba|ka|al|ga|in|ti|si|ge|sn|pb|as|sb|bi|se|te|po|cl|br|at\b|[\bc|k|b|n|o|f|i\b]{1}'
     try:
         t.value = t.value
     except ValueError:

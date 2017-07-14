@@ -5,26 +5,22 @@ import copy as copia
 
 from LexerContagem import tokens
 import LexerContagem as lexer
+from datetime import datetime
+
+
 def analise(file, quantidade_moleculas):
 
-    sentinela = False
-    sentinela_simbolo = 0
-
     # Nome dos arquivos criados
-    nome_arquivo_sucesso = 'saida_' + str(quantidade_moleculas) + '_moleculas_ARQUIVO_' + str(file) + '.txt'
-    sem_sucesso_nome_arquivo = 'saida_diferente_de_' + str(quantidade_moleculas) + '_moleculas_ARQUIVO_' + file + '.txt'
-    sem_contar_nome_arquivo = 'nao_contado_moleculas_ARQUIVO_' + file + '.txt'
+    nome_arquivo_sucesso = '../result/'+datetime.now().ctime()+'__saida_'+ str(quantidade_moleculas) + 'moleculas_ARQUIVO' + '.txt'
+    sem_sucesso_nome_arquivo = '../result/'+datetime.now().ctime()+'__saida_diferente_de_' + str(quantidade_moleculas) + 'moleculas_ARQUIVO_'  + '.txt'
+    sem_contar_nome_arquivo = '../result/'+datetime.now().ctime()+'__nao_contado_moleculas_ARQUIVO' + '.txt'
 
-    # Abrir para escriver no arquivo
-    sucesso = open(nome_arquivo_sucesso, 'w')
-    insucesso = open(sem_sucesso_nome_arquivo, 'w')
-    nao_contado = open(sem_contar_nome_arquivo, 'w')
+    if (quantidade_moleculas != -1):
 
-    precedence = (
-        ('left', 'ELEMENTO'),
-        ('left', 'ELEMENTOMINUS', 'ELEMENTO')
-
-    )
+        # Abrir para escriver no arquivo
+        sucesso = open(nome_arquivo_sucesso, 'w')
+        insucesso = open(sem_sucesso_nome_arquivo, 'w')
+        nao_contado = open(sem_contar_nome_arquivo, 'w')
 
     # Definir o valor de cada elemento que tem seu smimbolo com duas letras
     def p_variavel(p):
@@ -34,93 +30,54 @@ def analise(file, quantidade_moleculas):
         r_simbol = ''
         try:
             ate = 0
-
+            ultimo = ''
             tolkien = p.lexer.clone()
-            while(ate<1):
+            while(len(r_simbol) < dic_valorelementos[letter]):
                 token_ver = tolkien.next().value
                 if (token_ver == ('('or'[')):
                     l_simbol += '('
-                if (token_ver == (')'or']')):
+                elif (token_ver == (')'or']')):
                     r_simbol += ')'
+                elif (token_ver == ('=')):
+                    r_simbol += '))'
+                elif (token_ver == ('#')):
+                    r_simbol += ')))'
+                elif (token_ver == ('#')):
+                    r_simbol += '))))'
+                elif(ultimo == ')'):
+                    break
+                ultimo = token_ver
 
 
         except:
-            if (len(r_simbol) > dic_valorelementos[letter]):
-                dic_valorelementos[letter] = dic_valorelementos_variaveis[letter]
+            pass
+        if (len(r_simbol) > dic_valorelementos[letter]):
+            dic_valorelementos[letter] = dic_valorelementos_variaveis[letter]
+            try:
+                if (letter != 'H'):
+                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos_variaveis[letter] - 2
 
-        try:
-            if (letter != 'H'):
-                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
+            except:
+                dic_elementos['H'] = dic_valorelementos_variaveis[letter]
 
-        except:
-            dic_elementos['H'] = dic_valorelementos[letter]
+            try:
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
 
-        try:
-            dic_elementos[letter] = dic_elementos[letter] + 1
-        except:
-            dic_elementos[letter] = 1
         else:
-
             try:
-                dic_elementos[p[1]] = dic_elementos[p[1]] + 1
-            except:
-                dic_elementos[p[1]] = 1
-
-            try:
-                dic_elementos['H'] = dic_elementos['H'] - 1
-
+                if (letter != 'H'):
+                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
 
             except:
-                dic_elementos['H'] = dic_valorelementos[p[1]]
+                dic_elementos['H'] = dic_valorelementos[letter]
 
+            try:
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
 
-
-    # def p_expression_nada_simbol(p):
-    #     'term : LSIMBOLOS ELEMENTO RSIMBOLOS'
-    #
-    #     if (p[2] not in lista_elementosDuas):
-    #         for i in range(0, len(p[1])):
-    #
-    #             letter = p[2][i].upper()
-    #             try:
-    #                 if (letter != 'H'):
-    #                     dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter] - 2
-    #
-    #             except:
-    #                 dic_elementos['H'] = dic_valorelementos[letter]
-    #
-    #             try:
-    #                 dic_elementos[letter] = dic_elementos[letter] + 1
-    #             except:
-    #                 dic_elementos[letter] = 1
-    #     else:
-    #
-    #         try:
-    #             dic_elementos[p[2]] = dic_elementos[p[1]] + 1
-    #         except:
-    #             dic_elementos[p[2]] = 1
-    #
-    #         try:
-    #             dic_elementos['H'] = dic_elementos['H'] - 1
-    #
-    #
-    #         except:
-    #             dic_elementos['H'] = dic_valorelementos[p[2]]
-    #     sentinela_simbolo =+ 1
-
-
-    #
-    #     try:
-    #         dic_elementos[p[1]] = dic_elementos[p[1]] + 1
-    #     except:
-    #         dic_elementos[p[1]] = 1
-    #
-    #     try:
-    #         dic_elementos['H'] = dic_elementos['H'] - 1
-    #
-    #
-    #     except:
-    #         dic_elementos['H'] = dic_valorelementos[p[1]]
 
     # definir o valor de cada elemento
     def p_expression_nada(p):
@@ -262,9 +219,10 @@ def analise(file, quantidade_moleculas):
     moleculas = 0
     codigo_linha = 0
 
+    lista_resultados = []
     # função para realizar o processamento
     for linha in open(file,'r'):
-    # for linha in ['[14C](=O)(N)N']:
+    # for linha in ['N[C@@H](CO)C(O)=O']:
         dic_elementos = {}
         dic_valorelementos = {'H' : 1, 'Li' : 1, 'Na' : 1, 'K' : 1, 'Rb' : 1, 'Cs' : 1, 'Fr' : 1,
                               'Be' : 2, 'Mg' : 2, 'Ca' : 2, 'Sr' : 2, 'Ba' : 2, 'Ka' : 2, 'B' : 3, 'Al' : 3, 'Ga' : 3, 'In' : 3, 'Ti' : 3,
@@ -282,22 +240,24 @@ def analise(file, quantidade_moleculas):
         try:
             yacc.parse(linha)
             print 'Processamento: '+ linha, dic_elementos
+            if (quantidade_moleculas != -1):
 
-
-            if (quantidade_moleculas == somar_lista(dic_elementos.values())):
-
-                ## Abre arquivo de saida e insere o valor no arquivo de saida de sucesso
-                sucesso = open(nome_arquivo_sucesso, 'a+')
-                sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
-                                   +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
-                sucesso.close()
-
+                if (quantidade_moleculas == somar_lista(dic_elementos.values())):
+                    ## Abre arquivo de saida e insere o valor no arquivo de saida de sucesso
+                    sucesso = open(nome_arquivo_sucesso, 'a+')
+                    sucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                       +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
+                    sucesso.close()
+                    lista_resultados.append(dic_elementos)
+                else:
+                    ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
+                    insucesso = open(sem_sucesso_nome_arquivo, 'a+')
+                    insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
+                                         +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
+                    insucesso.close()
+                    lista_resultados.append(dic_elementos)
             else:
-                ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
-                insucesso = open(sem_sucesso_nome_arquivo, 'a+')
-                insucesso.writelines(str(codigo_linha) + ' ' + str(dic_elementos)+' Soma moleculas: '+str(somar_lista(dic_elementos.values()))
-                                     +' Massa Molar: '+str(set_massa_molar(dic_elementos))+'\n')
-                insucesso.close()
+                lista_resultados.append(dic_elementos)
         except:
             ## Abre arquivo de saida e insere o valor no arquivo de saida de insucesso
             nao_contado = open(sem_contar_nome_arquivo, 'a+')
@@ -305,10 +265,16 @@ def analise(file, quantidade_moleculas):
             nao_contado.close()
             continue
 
+
+
+
     # Inprimir na tela numero de moleculas
     print 'Moleculas: '+ str(moleculas)
-    sucesso.close()
-    insucesso.close()
+    if (quantidade_moleculas != -1):
+
+        sucesso.close()
+        insucesso.close()
+    return lista_resultados
 # Funcao para somar moleculas
 def somar_lista(lista):
     soma = 0
