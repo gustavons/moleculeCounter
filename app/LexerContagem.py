@@ -8,7 +8,7 @@ import ply.lex as lex
 
 # class MyLexer(object):
 
-tokens = ('NUMBER','VARIAVEL','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'LSIMBOLOS', 'RSIMBOLOS' )
+tokens = ('MAIOR','NUMBER','VARIAVEL','ELEMENTO','ELEMENTOMINUS', 'IGUAL', 'SIFRAO', 'HASHTAG', 'LSIMBOLOS', 'RSIMBOLOS', 'PONTO')
 
 # Tokens
 # t_ELEMENTODUASLETRAS = r'(\b(Li)|(Na)|(Rb)|(Cs)|(Fr)|(Be)|(Mg)|(Ca)|(Sr)' \
@@ -21,9 +21,11 @@ t_IGUAL = r'\='
 t_SIFRAO =  r'\$'
 t_HASHTAG = r'\#'
 t_VARIAVEL = r'P|S|s|p'
+t_PONTO = r'\.'
+t_MAIOR = r'>{2}'
 
 # A string containing ignored characters
-t_ignore = '\n:+-.@\/hH'
+t_ignore = '\n:+-@\/hH'
 t_ignore_COMMENT = r'\t.*'
 # t_ignore_COMMENT = r'\t.*'
 
@@ -58,7 +60,7 @@ def t_error(t):
 
 
 # Build the lexer
-lex.lex(debug=1)
+lex.lex()
 
         # Build the lexer
 #     def build(self, **kwargs):

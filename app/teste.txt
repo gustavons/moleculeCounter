@@ -1,0 +1,6 @@
+Cl[111In](Cl)Cl
+CC(C)(C)c1ccc(cc1)C(=O)CC(=O)c1ccc(cc1)OC
+[13C](=N)(N)O
+[14C](=O)(N)N
+Oc1ccc(O)cc1
+S(=O)(=O)(O)CC12C(C(/C(=C/c3ccc(/C=C\4/C5C(C(C4=O)(CC5)CS(=O)(=O)O)(C)C)cc3)/C1=O)CC2)(C)C

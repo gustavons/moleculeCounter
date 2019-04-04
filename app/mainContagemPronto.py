@@ -15,6 +15,7 @@ def analise(file, quantidade_moleculas):
     sem_sucesso_nome_arquivo = '../result/'+datetime.now().ctime()+'__saida_diferente_de_' + str(quantidade_moleculas) + 'moleculas_ARQUIVO_'  + '.txt'
     sem_contar_nome_arquivo = '../result/'+datetime.now().ctime()+'__nao_contado_moleculas_ARQUIVO' + '.txt'
 
+    sentinela = []
     if (quantidade_moleculas != -1):
 
         # Abrir para escriver no arquivo
@@ -22,43 +23,78 @@ def analise(file, quantidade_moleculas):
         insucesso = open(sem_sucesso_nome_arquivo, 'w')
         nao_contado = open(sem_contar_nome_arquivo, 'w')
 
-    # Definir o valor de cada elemento que tem seu smimbolo com duas letras
+    # Definir o valor de elementos com a valencia variavel
     def p_variavel(p):
         'term : VARIAVEL'
+        lower = p[1].islower()
+        position =  p.lexer.lexpos
         letter = p[1].upper()
-        l_simbol = ''
-        r_simbol = ''
+        l_simbol = 0
+        r_simbol = 0
         try:
-            ate = 0
             ultimo = ''
             tolkien = p.lexer.clone()
-            while(len(r_simbol) < dic_valorelementos[letter]):
+
+            while(r_simbol < max(dic_valorelementos_variaveis[letter])-1):
                 token_ver = tolkien.next().value
-                if (token_ver == ('('or'[')):
-                    l_simbol += '('
-                elif (token_ver == (')'or']')):
-                    r_simbol += ')'
-                elif (token_ver == ('=')):
-                    r_simbol += '))'
-                elif (token_ver == ('#')):
-                    r_simbol += ')))'
-                elif (token_ver == ('#')):
-                    r_simbol += '))))'
-                elif(ultimo == ')'):
+                if (token_ver.isdigit()):
                     break
+                if (ultimo == '' and token_ver == '('):
+                    break
+                elif (token_ver == (')'or']') and ultimo ==''):
+                    break
+                if (token_ver == (')'or']')):
+                    r_simbol += 1
+                elif (token_ver == ('('or'[')):
+                    l_simbol += 0
+                elif (token_ver == ('=')):
+                    if (ultimo == '('):
+                        r_simbol += 1
+                    else:
+                        r_simbol += 2
+                elif (token_ver == ('#')):
+                    r_simbol += 3
+                elif (token_ver == ('$')):
+                    r_simbol += 4
+
+
                 ultimo = token_ver
-
-
+            # if (position > 2):
+            #     r_simbol += ')'
         except:
             pass
-        if (len(r_simbol) > dic_valorelementos[letter]):
-            dic_valorelementos[letter] = dic_valorelementos_variaveis[letter]
+        if (not lower and p.lexer.lexpos > 2):
+            r_simbol += 1
+        elif(lower and p.lexer.lexpos <= 1):
+            r_simbol += 1
+
+        if (lower and r_simbol==0):
+            r_simbol += 3
+        if(lower):
+            valor = r_simbol
+            letter = p[1].upper()
             try:
-                if (letter != 'H'):
-                    dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos_variaveis[letter] - 2
+                dic_elementos[letter] = dic_elementos[letter] + 1
+            except:
+                dic_elementos[letter] = 1
+
+            try:
+                dic_elementos['H'] = dic_elementos['H'] + int(valor-3)
 
             except:
-                dic_elementos['H'] = dic_valorelementos_variaveis[letter]
+
+                dic_elementos['H'] = valor - 3
+
+        # Verificando se o elemento tem ou não valencia variavel
+        elif (r_simbol > dic_valorelementos[letter]):
+            valor = r_simbol
+
+            try:
+                if (letter != 'H'):
+                    dic_elementos['H'] = dic_elementos['H'] + valor - 2
+
+            except:
+                dic_elementos['H'] = valor
 
             try:
                 dic_elementos[letter] = dic_elementos[letter] + 1
@@ -106,8 +142,7 @@ def analise(file, quantidade_moleculas):
                 dic_elementos[p[1]] = 1
 
             try:
-                dic_elementos['H'] = dic_elementos['H'] - 1
-
+                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[p[1]] - 2
 
             except:
                 dic_elementos['H'] = dic_valorelementos[p[1]]
@@ -123,25 +158,32 @@ def analise(file, quantidade_moleculas):
             except:
                 dic_elementos[letter] = 1
 
-
             try:
-                dic_elementos['H'] = dic_elementos['H'] +1
-
+                dic_elementos['H'] = dic_elementos['H'] + dic_valorelementos[letter]-3
 
             except:
 
-                dic_elementos['H'] = int(dic_valorelementos[letter]*0.75)
+                dic_elementos['H'] = int(dic_valorelementos[letter] -1)
 
+    # As simbolos
+    # def p_expression_simbolos(p):
+    #     'term :  LSIMBOLOS term RSIMBOLOS'
+        # print 'aqui'
+    def p_expression_rsimbolos(p):
+        'term : RSIMBOLOS'
+    def p_expression_ssimbolos(p):
+        'term : LSIMBOLOS'
 
+    def p_expression_ponto(p):
+        'term : PONTO'
+        dic_elementos['H'] = dic_elementos['H'] + 2
 
+    def p_expression_maior(p):
+        'term : MAIOR'
+        dic_elementos['H'] = dic_elementos['H'] + 2
 
-
-    # As tres funções abaixo são para trabalhar com simbolos
-    def p_expression_simbolos(p):
-        'term :  LSIMBOLOS'
-    def p_expression_simbolos_junto(p):
-        'term :  RSIMBOLOS'
-
+    def p_expression_so_igual(p):
+        'term : IGUAL'
     def p_expression_igual (p):
         'term :  term IGUAL term'
         try:
@@ -161,7 +203,8 @@ def analise(file, quantidade_moleculas):
         except TypeError:
             pass
 
-
+    def p_expression_so_hashtag(p):
+        'term : HASHTAG'
     def p_term_hashtag (p):
             'term : term HASHTAG term'
             try:
@@ -180,6 +223,8 @@ def analise(file, quantidade_moleculas):
                 dic_elementos['H'] = dic_valorelementos[p[3][0].upper()]
             except TypeError:
                 pass
+    def p_expression_so_sifrao(p):
+        'term : SIFRAO'
     def p_term_sifrao(p):
         'term :  term SIFRAO term'
         try:
@@ -197,10 +242,6 @@ def analise(file, quantidade_moleculas):
         except TypeError:
             pass
 
-
-
-
-
     def p_error(p):
         print "Syntax error in input!"
 
@@ -209,11 +250,15 @@ def analise(file, quantidade_moleculas):
 
     def p_aromatica(p):
         'term : term NUMBER'
-        dic_elementos['H'] = dic_elementos['H'] - 1
+        if (p[2] in sentinela):
+            dic_elementos['H'] = dic_elementos['H'] - 2
+            sentinela.remove(p[2])
+        else:
+            sentinela.append(p[2])
 
 
     # Build the parser
-    yacc.yacc(debug=True)
+    yacc.yacc()
     # Use this if you want to build the parser using LALR(1) instead of SLR
     yacc.yacc(method="SLR")
     moleculas = 0
@@ -231,7 +276,7 @@ def analise(file, quantidade_moleculas):
                               'O' : 2, 'S' : 2, 'Se' : 2, 'Te' : 2, 'Po' : 2,
                               'F' : 1, 'Cl' : 1, 'Br' : 1, 'I' : 1, 'At' : 1
                               }
-        dic_valorelementos_variaveis = {'P' : 5, 'S' : 6}
+        dic_valorelementos_variaveis = {'P' : [4,5], 'S' : [3,4,5]}
         lista_elementosDuas = ['Mg', 'Br', 'In', 'Ka', 'Li', 'Pb', 'Si', 'As', 'Sn', 'Rb', 'Ti', 'Sb',
                              'Po', 'Sr', 'Be', 'Fr', 'Te', 'Ba', 'Cl',
                              'Ca', 'Al', 'Ge', 'Se', 'Ga', 'Na', 'Cs', 'Bi', 'At']
@@ -240,6 +285,8 @@ def analise(file, quantidade_moleculas):
         try:
             yacc.parse(linha)
             print 'Processamento: '+ linha, dic_elementos
+            if (dic_elementos['H'] < 0):
+                dic_elementos['H'] = 0
             if (quantidade_moleculas != -1):
 
                 if (quantidade_moleculas == somar_lista(dic_elementos.values())):
@@ -263,6 +310,7 @@ def analise(file, quantidade_moleculas):
             nao_contado = open(sem_contar_nome_arquivo, 'a+')
             nao_contado.writelines(str(codigo_linha) + '   ' + linha)
             nao_contado.close()
+            lista_resultados.append(dic_elementos)
             continue
 
 
@@ -303,8 +351,8 @@ def set_massa_molar(dic_com_dados):
 if __name__ == "__main__":
     # Nome do arquivo
     file = 'drugb_approved2.smiles'
-
+    # file = 'teste.txt'
     # Captura o numero de atomos
-    # numero_atomos = int(input("Digite o numero de atomos: "))
+    numero_atomos = int(input("Digite o numero de atomos: "))
 
-    analise(file, 10)
+    analise(file, numero_atomos)
